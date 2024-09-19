@@ -1873,7 +1873,6 @@ input, select, textarea {
   z-index: 0;
   position: relative;
   transform: rotate(30deg);
-  align-items: center;
 }
 .hexagon-item:first-child {
   margin-left: 0;
