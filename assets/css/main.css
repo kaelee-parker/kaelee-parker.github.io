@@ -1884,7 +1884,7 @@ input, select, textarea {
   transform: rotate(30deg);
 }
 .hexagon-item:first-child {
-  margin-left: 0px;
+  margin-left: 0;
 }
 .hexagon-item:hover {
   z-index: 1;
@@ -1918,7 +1918,7 @@ input, select, textarea {
 .hex-item {
   position: absolute;
   top: 0;
-  left: 0px;
+  left: 50px;
   width: 100px;
   height: 173.2050807569px;
 }
