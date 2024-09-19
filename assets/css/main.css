@@ -72,6 +72,25 @@ input, select, textarea {
 	appearance: none;
 }
 
+.pt-table {
+  display: table;
+  width: 100%;
+  height: calc(100vh - 4px);
+}
+
+.pt-tablecell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* Basic */
 
 	html {
