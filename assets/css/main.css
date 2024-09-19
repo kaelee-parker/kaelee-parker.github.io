@@ -91,6 +91,15 @@ input, select, textarea {
   height: 100%;
 }
 
+.relative {
+  position: relative;
+}
+
+.primary,
+.link:hover {
+  color: #fa6862;
+}
+
 /* Basic */
 
 	html {
