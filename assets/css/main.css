@@ -151,7 +151,7 @@ ahex:hover, ahex:focus {
   margin-left: -29px;
   z-index: 0;
   position: relative;
-  transform: rotate(30deg) translate(70%, -200%);
+  transform: rotate(30deg) translate(75%, -180%);
 }
 .hexagon-item:first-child {
   transform: rotate(30deg) translate(60%, -270%);
