@@ -2418,6 +2418,7 @@ ahex:hover, ahex:focus {
 		}
 
 		.wrapper.style2 {
+			padding: 0;
 			background-color: #83d3c9;
 			background-image: url("images/light-bl.svg"), url("images/light-br.svg");
 			background-position: bottom left, bottom right;
