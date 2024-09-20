@@ -82,12 +82,23 @@ input, select, textarea {
 /*
  *  CSS Helper Class
  */
+
 .clear:before, .clear:after {
   content: " ";
   display: table;
 }
 .clear:after {
   clear: both;
+}
+
+a {
+  color: inherit;
+  transition: all 0.3s ease 0s;
+}
+a:hover, a:focus {
+  color: #ababab;
+  text-decoration: none;
+  outline: 0 none;
 }
 
 .pt-table {
