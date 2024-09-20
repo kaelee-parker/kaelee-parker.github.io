@@ -187,7 +187,7 @@ ahex:hover, ahex:focus {
 .hex-item {
   position: absolute;
   top: 0;
-  left: 250px;
+  left: 50px;
   width: 100px;
   height: 173.2050807569px;
 }
