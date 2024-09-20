@@ -184,12 +184,10 @@ ahex:hover, ahex:focus {
   transform: scale(0.97);
 }
 
-
-
 .hex-item {
   position: absolute;
   top: 0;
-  left: -50px;
+  left: 250px;
   width: 100px;
   height: 173.2050807569px;
 }
