@@ -2848,7 +2848,7 @@ ahex:hover, ahex:focus {
 		background-size: 25em, 25em, auto, cover;
 		padding: 5em;
 		text-align: center;
-		padding: 5em 5em 10em 5em;
+		/* padding: 5em 5em 10em 5em; */
 		/* color: #fff; */
 		/* background: #E8EEF4; */
 		/* color: #7c8081; */
