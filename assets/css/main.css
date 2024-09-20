@@ -91,11 +91,11 @@ input, select, textarea {
   clear: both;
 }
 
-a {
+ahex {
   color: inherit;
   transition: all 0.3s ease 0s;
 }
-a:hover, a:focus {
+ahex:hover, ahex:focus {
   color: #ababab;
   text-decoration: none;
   outline: 0 none;
