@@ -129,6 +129,19 @@ ahex:hover, ahex:focus {
   color: #fa6862;
 }
 
+/*------------------------------------------------
+    Home Page
+-------------------------------------------------*/
+.page-home {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+}
+.page-home .overlay {
+  background-color: rgba(255, 255, 255, 0.93);
+}
+
 /* End of container */
 .hexagon-item {
   cursor: pointer;
