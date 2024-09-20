@@ -154,7 +154,7 @@ ahex:hover, ahex:focus {
   transform: rotate(30deg); /*translate(50%, -100%);*/
 }
 .hexagon-item:first-child {
-  transform: rotate(30deg) translate(-100%, 50%);
+  transform: rotate(30deg) translate(100%, 50%);
   margin-left: 0;
 }
 /*
