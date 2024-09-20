@@ -155,6 +155,7 @@ ahex:hover, ahex:focus {
 }
 .hexagon-item:first-child {
   margin-left: 0;
+  position: absolute;
   transform: translate(-87px, 80px);
 }
 .hexagon-item:hover {
