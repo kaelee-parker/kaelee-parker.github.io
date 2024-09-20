@@ -151,10 +151,11 @@ ahex:hover, ahex:focus {
   margin-left: -29px;
   z-index: 0;
   position: relative;
-  transform: rotate(30deg) translate(100%, -50%);
+  transform: rotate(30deg) translate(100%, 50%);
 }
 .hexagon-item:first-child {
   margin-left: 0;
+  transform: translate(-87px, 80px);
 }
 .hexagon-item:hover {
   z-index: 1;
@@ -177,10 +178,6 @@ ahex:hover, ahex:focus {
 }
 .hexagon-item:hover .hex-content svg {
   transform: scale(0.97);
-}
-
-.page-home .hexagon-item:first-child{
-  transform: rotate(30deg) translate(-87px, 80px);
 }
 
 .hex-item {
