@@ -154,8 +154,16 @@ ahex:hover, ahex:focus {
   transform: rotate(30deg) translate(40%, -300%);
 }
 .hexagon-item:first-child {
-  transform: rotate(30deg) translate(40%, -270%);
+  /*transform: rotate(30deg) translate(40%, -270%);*/
+  margin-left: 0;
 }
+
+.page-home .hexagon-item:nth-last-child(1),
+.page-home .hexagon-item:nth-last-child(2),
+.page-home .hexagon-item:nth-last-child(3) {
+  transform: rotate(30deg) translate(87px, -80px);
+}
+
 .hexagon-item:hover {
   z-index: 1;
 }
