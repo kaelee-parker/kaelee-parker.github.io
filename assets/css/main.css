@@ -151,10 +151,10 @@ ahex:hover, ahex:focus {
   margin-left: -29px;
   z-index: 0;
   position: relative;
-  transform: rotate(30deg) translate(250%, -200%);
+  transform: rotate(30deg) translate(300%, -250%);
 }
 .hexagon-item:first-child {
-  transform: rotate(30deg) translate(250%, -200%);
+  transform: rotate(30deg) translate(300%, -250%);
   margin-left: 0;
 }
 /*
