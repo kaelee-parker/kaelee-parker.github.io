@@ -2804,6 +2804,17 @@ ahex:hover, ahex:focus {
 			#banner .inner footer {
 				margin: 2em 0 0 0;
 			}
+			
+			#banner .contact-box {
+  				display: block;
+  				width: fit-content;
+  				margin: 1rem auto 0 auto;       /* centers the box */
+  				font-size: 0.85em;
+  				padding: 0.6rem 1rem;
+  				border: 1px solid #ffffff88;
+  				border-radius: 6px;
+ 				background: rgba(255,255,255,0.10);
+			}
 
 /* Main */
 
@@ -3590,15 +3601,4 @@ ahex:hover, ahex:focus {
 
 @media (max-width: 480px) {
   .hex-content { transform: rotate(-30deg) scale(0.9); }
-}
-
-#banner .contact-box {
-  display: block;
-  width: fit-content;
-  margin: 1rem auto 0 auto;       /* centers the box */
-  font-size: 0.85em;
-  padding: 0.6rem 1rem;
-  border: 1px solid #ffffff88;
-  border-radius: 6px;
-  background: rgba(255,255,255,0.10);
 }
