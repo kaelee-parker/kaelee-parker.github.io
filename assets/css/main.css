@@ -3684,3 +3684,72 @@ ahex:hover, ahex:focus {
   }
   #about .about-photo img { max-width: 240px; margin: 0 auto; }
 }
+
+/* ========= QUICK LINKS LAYOUT & RESPONSIVE TUNING ========= */
+
+/* 1) Two-column layout: contact box (left) + hexes (right) */
+#quick-links .links-wrap {
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) 1fr;  /* contact box | hexes */
+  align-items: center;
+  gap: clamp(1rem, 4vw, 3rem);                      /* responsive gap */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Nudge the contact box to the RIGHT within its column */
+#quick-links .contact-box {
+  justify-self: end;                                 /* pushes it rightward */
+  /* fine-tune “how far right” by adjusting this: */
+  transform: translateX(8px);
+}
+
+/* 2) Hex row behavior: keep on one line on wide screens, wrap on small */
+.hexagon-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;                       /* align with contact box */
+  gap: clamp(1rem, 3vw, 2rem);
+  flex-wrap: wrap;                                   /* default: may wrap */
+}
+
+/* On medium/large screens, keep them on one line */
+@media (min-width: 900px) {
+  .hexagon-menu { flex-wrap: nowrap; }
+}
+
+/* 3) Kill legacy float/translate that causes misplacement (safety) */
+.hexagon-item {
+  float: none !important;
+  transform: rotate(30deg) !important;               /* no translate */
+}
+
+/* 4) Tighten the space below the banner a bit on all screens */
+#banner { padding-bottom: 1.25rem !important; }
+
+/* ========= SMALL SCREEN FALLBACKS ========= */
+@media (max-width: 820px) {
+  /* Stack contact box above hexes, centered */
+  #quick-links .links-wrap {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  #quick-links .contact-box {
+    justify-self: center;
+    transform: none;                                  /* no nudge on mobile */
+    margin-bottom: 0.75rem;
+  }
+  /* Allow hexes to wrap nicely and stay centered on phones */
+  .hexagon-menu {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem 1.25rem;
+  }
+}
+
+/* ========= OPTIONAL: SCALE HEXES DOWN A TOUCH ON NARROW VIEWPORTS ========= */
+@media (max-width: 640px) {
+  .hex-content { transform: rotate(-30deg) scale(0.92); }
+}
+
