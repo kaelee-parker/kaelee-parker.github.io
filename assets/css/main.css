@@ -2835,7 +2835,6 @@ ahex:hover, ahex:focus {
 				padding-bottom: 1em !important;   /* default is ~6em; adjust to taste */
 			}
 
-
 /* Main */
 
 	#main {
@@ -3596,6 +3595,14 @@ ahex:hover, ahex:focus {
 	}
 /* === Hexagon centering overrides (add at the END of main.css) === */
 
+/* Stop left-floating and remove the layout translate that pushes items off-center */
+.hexagon-item {
+  float: none !important;
+  margin: 0;                    /* flex gap handles spacing */
+  position: relative;
+  transform: rotate(30deg) !important;  /* keep rotation, drop translate */
+}
+
 /* Make the menu a centered, wrapping flex container */
 .hexagon-menu {
   display: flex;
@@ -3603,15 +3610,7 @@ ahex:hover, ahex:focus {
   align-items: center;
   flex-wrap: wrap;              /* keep rows centered when wrapping */
   gap: 2px 2px;               /* row gap / column gap (adjust to taste) */
-  margin: 0 auto;
-}
-
-/* Stop left-floating and remove the layout translate that pushes items off-center */
-.hexagon-item {
-  float: none !important;
-  margin: 0;                    /* flex gap handles spacing */
-  position: relative;
-  transform: rotate(30deg) !important;  /* keep rotation, drop translate */
+  margin: 0 auto 1.25rem;
 }
 
 /* Remove the special offset on the first item */
@@ -3621,4 +3620,46 @@ ahex:hover, ahex:focus {
 
 @media (max-width: 480px) {
   .hex-content { transform: rotate(-30deg) scale(0.9); }
+}
+
+/* Pull the hex buttons closer to the banner */
+#banner { padding-bottom: 1.25rem !important; }
+
+#quick-links {
+  padding: 0.75rem 0 0;          /* small top padding */
+}
+
+/* Make sure old float-based styles can't cause overlap */
+.hexagon-item { float: none !important; }
+
+/* --- About: photo + text side-by-side --- */
+#about .about-wrap {
+  display: grid;
+  grid-template-columns: 280px 1fr;   /* photo width, then text */
+  gap: 2rem;
+  align-items: start;
+  max-width: 1000px;
+  margin: 1.25rem auto 0;             /* centered block */
+  padding: 0 1rem;                     /* small side padding on narrow screens */
+}
+
+#about .about-photo img {
+  width: 100%;
+  max-width: 280px;
+  display: block;
+  border-radius: 6px;
+  border: 2px solid rgba(255,255,255,0.18);
+}
+
+/* Nice readable line length for the paragraph */
+#about .about-text { line-height: 1.7; }
+
+/* Responsive: stack photo above text on small screens */
+@media (max-width: 800px) {
+  #about .about-wrap {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    max-width: 720px;
+  }
+  #about .about-photo img { max-width: 240px; margin: 0 auto; }
 }
