@@ -2832,7 +2832,7 @@ ahex:hover, ahex:focus {
 			/* Reduce banner bottom spacing */
 			#banner {
   				padding-top: 6em;
-				padding-bottom: 1em !important;   /* default is ~6em; adjust to taste */
+				padding-bottom: 2em !important;   /* default is ~6em; adjust to taste */
 			}
 
 /* Main */
