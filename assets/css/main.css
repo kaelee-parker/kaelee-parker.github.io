@@ -279,9 +279,17 @@ ahex:hover, ahex:focus {
 }
 
 .hexagon-menu {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;           /* allows second row */
+  gap: 2px 2px;            /* spacing between hexagons (vertical , horizontal) */
+  margin: 0 auto;
+}
+
+.hexagon-item {
+  float: none !important;    /* override Phantom bootstrap float */
+  transform: rotate(30deg) !important;
 }
 
 
@@ -3607,9 +3615,9 @@ ahex:hover, ahex:focus {
 }
 
 /* Remove the special offset on the first item */
-.hexagon-item:first-child {
-  transform: rotate(30deg) !important;
-}
+/*.hexagon-item:first-child { */
+/*  transform: rotate(30deg) !important;*/
+/*}*/
 
 @media (max-width: 480px) {
   .hex-content { transform: rotate(-30deg) scale(0.9); }
