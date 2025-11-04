@@ -3646,7 +3646,7 @@ ahex:hover, ahex:focus {
   border-radius: 4px;
   background: rgba(255,255,255,0.08);
   text-transform: none !important;
-  color: #ffffff;
+  color: #000000;
 }
 
 /* Make sure old float-based styles can't cause overlap */
