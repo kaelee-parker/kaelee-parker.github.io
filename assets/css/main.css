@@ -3571,7 +3571,7 @@ ahex:hover, ahex:focus {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;              /* keep rows centered when wrapping */
-  gap: 10px 10px;               /* row gap / column gap (adjust to taste) */
+  gap: 2px 2px;               /* row gap / column gap (adjust to taste) */
   margin: 0 auto;
 }
 
