@@ -3563,3 +3563,27 @@ ahex:hover, ahex:focus {
 			}
 
 	}
+/* === Hexagon centering overrides (add at the END of main.css) === */
+
+/* Make the menu a centered, wrapping flex container */
+.hexagon-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;              /* keep rows centered when wrapping */
+  gap: 24px 18px;               /* row gap / column gap (adjust to taste) */
+  margin: 0 auto;
+}
+
+/* Stop left-floating and remove the layout translate that pushes items off-center */
+.hexagon-item {
+  float: none !important;
+  margin: 0;                    /* flex gap handles spacing */
+  position: relative;
+  transform: rotate(30deg) !important;  /* keep rotation, drop translate */
+}
+
+/* Remove the special offset on the first item */
+.hexagon-item:first-child {
+  transform: rotate(30deg) !important;
+}
