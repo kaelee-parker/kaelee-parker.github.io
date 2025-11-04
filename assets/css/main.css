@@ -2815,6 +2815,20 @@ ahex:hover, ahex:focus {
   				border-radius: 6px;
  				background: rgba(255,255,255,0.10);
 			}
+			
+			#banner .inner {
+  				padding-bottom: 0 !important;
+			}
+
+			/* Reduce banner bottom spacing */
+			#banner {
+  				padding-bottom: 2em !important;   /* default is ~6em; adjust to taste */
+			}
+
+			#one {
+  				padding-top: 1em !important;
+			}
+
 
 /* Main */
 
