@@ -3623,10 +3623,10 @@ ahex:hover, ahex:focus {
 }
 
 /* Pull the hex buttons closer to the banner */
-#banner { padding-bottom: 1.75rem !important; }
+#banner { padding-bottom: 1rem !important; }
 
 #quick-links {
-  padding: 1.2rem 0 0;          /* small top padding */
+  padding: 2.5rem 0 0;          /* small top padding */
 }
 
 /* Make sure old float-based styles can't cause overlap */
