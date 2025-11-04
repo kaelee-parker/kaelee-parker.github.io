@@ -3664,10 +3664,10 @@ ahex:hover, ahex:focus {
 }
 
 #about .about-photo img {
-  width: 100%;
+  width: 80%;
   max-width: 280px;
   display: block;
-  border-radius: 6px;
+  border-radius: 3px;
   border: 2px solid;
   border-color: #000000;
 }
