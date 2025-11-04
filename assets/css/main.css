@@ -278,6 +278,13 @@ ahex:hover, ahex:focus {
   color: #fff;
 }
 
+.hexagon-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
 /* Basic */
 
 	html {
