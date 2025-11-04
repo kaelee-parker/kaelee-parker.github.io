@@ -2817,12 +2817,14 @@ ahex:hover, ahex:focus {
 			}
 			
 			#banner .inner {
+				padding-top: 1.5em;
   				padding-bottom: 1em !important;
 			}
 
 			/* Reduce banner bottom spacing */
 			#banner {
-  				padding-bottom: 1.5em !important;   /* default is ~6em; adjust to taste */
+  				padding-top: 1.5em;
+				padding-bottom: 1.5em !important;   /* default is ~6em; adjust to taste */
 			}
 
 			#one {
