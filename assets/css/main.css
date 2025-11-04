@@ -3629,6 +3629,26 @@ ahex:hover, ahex:focus {
   padding: 2.5rem 0 0;          /* small top padding */
 }
 
+/* Two-column layout: box on left, hexes on right */
+#quick-links .links-wrap {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contact box styling (same visual style as banner) */
+#quick-links .contact-box {
+  font-size: 0.9em;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 4px;
+  background: rgba(255,255,255,0.08);
+  text-transform: none !important;
+  color: #ffffff;
+}
+
 /* Make sure old float-based styles can't cause overlap */
 .hexagon-item { float: none !important; }
 
