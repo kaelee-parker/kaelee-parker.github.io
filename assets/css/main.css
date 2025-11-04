@@ -3571,7 +3571,7 @@ ahex:hover, ahex:focus {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;              /* keep rows centered when wrapping */
-  gap: 24px 18px;               /* row gap / column gap (adjust to taste) */
+  gap: 10px 10px;               /* row gap / column gap (adjust to taste) */
   margin: 0 auto;
 }
 
@@ -3587,3 +3587,8 @@ ahex:hover, ahex:focus {
 .hexagon-item:first-child {
   transform: rotate(30deg) !important;
 }
+
+@media (max-width: 480px) {
+  .hex-content { transform: rotate(-30deg) scale(0.9); }
+}
+
