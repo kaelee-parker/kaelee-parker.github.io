@@ -72,11 +72,6 @@ input, select, textarea {
 	appearance: none;
 }
 
-section {
-	padding-top: 1em !important;
-}
-
-
 /*------------------------------------------------
 	Start Styling
 -------------------------------------------------*/
@@ -2822,8 +2817,8 @@ ahex:hover, ahex:focus {
 			}
 			
 			#banner .inner {
-				padding-top: 3.5em;
-  				padding-bottom: 1em !important;
+				padding-top: 1.5em;
+  				padding-bottom: 1.5em !important;
 			}
 
 			/* Reduce banner bottom spacing */
