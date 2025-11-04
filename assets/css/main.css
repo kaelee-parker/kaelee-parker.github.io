@@ -3642,8 +3642,9 @@ ahex:hover, ahex:focus {
 #quick-links .contact-box {
   font-size: 0.9em;
   padding: 0.75rem 1rem;
-  border: 1px solid #483D8B;
+  border: 1px solid;
   border-radius: 4px;
+  border-color: #483D8B;
   background: #F8F8FF;
   text-transform: none !important;
   color: #000000;
