@@ -3640,8 +3640,8 @@ ahex:hover, ahex:focus {
 
 /* Contact box styling (same visual style as banner) */
 #quick-links .contact-box {
-  font-size: 0.9em;
-  padding: 0.75rem 1rem;
+  font-size: 1.5em;
+  padding: 1.5rem 1.5rem;
   border: 1px solid;
   border-radius: 4px;
   border-color: #483D8B;
