@@ -3626,7 +3626,7 @@ ahex:hover, ahex:focus {
 #banner { padding-bottom: 1.25rem !important; }
 
 #quick-links {
-  padding: 0.75rem 0 0;          /* small top padding */
+  padding: 1.2rem 0 0;          /* small top padding */
 }
 
 /* Make sure old float-based styles can't cause overlap */
