@@ -3607,8 +3607,8 @@ ahex:hover, ahex:focus {
 .hexagon-menu {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;              /* keep rows centered when wrapping */
+  align-items: flex-start;
+  flex-wrap: nowrap;              /* keep rows centered when wrapping */
   gap: 2px 2px;               /* row gap / column gap (adjust to taste) */
   margin: 0 auto 1.25rem;
 }
@@ -3631,9 +3631,9 @@ ahex:hover, ahex:focus {
 
 /* Two-column layout: box on left, hexes on right */
 #quick-links .links-wrap {
-  display: grid;
+  display: flex;
   grid-template-columns: auto 1fr;
-  gap: 2rem;
+  gap: 5rem;
   justify-content: center;
   align-items: center;
 }
