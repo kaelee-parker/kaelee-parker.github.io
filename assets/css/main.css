@@ -3756,3 +3756,101 @@ ahex:hover, ahex:focus {
 .italic-text {
     font-style: italic;
 }
+
+/* =======================
+   HEXAGON: size + layout
+   ======================= */
+
+/* Change just this to make all hex buttons smaller/larger */
+:root {
+  --hex-scale: 0.82;      /* 0.82 ≈ smaller than what you have now */
+}
+
+/* The container that holds the hex buttons */
+.hexagon-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem 2rem;        /* vertical, horizontal spacing */
+  flex-wrap: wrap;         /* wrap on small screens */
+  margin: 0 auto 1.2rem;
+}
+
+/* Neutralize legacy float/translate; keep the 30° rotation */
+.hexagon-item {
+  float: none !important;
+  transform: rotate(30deg) scale(var(--hex-scale)) !important;
+  transform-origin: center center;
+  position: relative;
+}
+
+/* The clickable area (rotated back), center the text perfectly */
+.hex-content {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center;
+  transform: rotate(-30deg);
+  line-height: 1.2;
+  padding: 0;              /* rely on SVG size */
+}
+
+/* Make the title readable at smaller sizes */
+.hex-content .title {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.95rem;      /* adjust if needed */
+  letter-spacing: 0.02em;
+}
+
+/* Ensure the SVG defines the hex size; keep it responsive to scale() */
+.hex-content svg {
+  width: 174px;
+  height: 200px;
+  display: block;
+}
+
+/* Clean, even border for the hex (single border; adjust colors if desired) */
+.hex-content svg path {
+  fill: #1e2530;                     /* inner fill */
+  stroke: rgba(255,255,255,0.9);     /* border */
+  stroke-width: 6px;                 /* thickness of border */
+}
+
+/* If the theme draws extra “double” borders with .hex-item layers, hide them */
+.hex-item { display: none !important; }
+
+/* Keep hexes on one line on wide screens (feel free to remove if you want wrap) */
+@media (min-width: 980px) {
+  .hexagon-menu { flex-wrap: nowrap; }
+}
+
+/* =======================
+   ABOUT ME: wider on wide screens
+   ======================= */
+
+/* Widen your about-body wrapper on big screens.
+   Use whichever selector matches your layout; these are safe, non-breaking overrides. */
+#about .about-wrap,
+#about .inner,
+section#about .inner,
+section#one .inner {
+  max-width: 1200px;   /* wider than the theme’s ~900–1000px */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* If you’re using a two-column photo+text grid, keep it roomy */
+#about .about-wrap {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  gap: 2rem;
+}
+
+/* =======================
+   Optional polish
+   ======================= */
+
+/* Pull quick-links a touch closer to the banner (reduce the blank gap) */
+#banner { padding-bottom: 1.25rem !important; }
+#quick-links { padding-top: 0.5rem; }
