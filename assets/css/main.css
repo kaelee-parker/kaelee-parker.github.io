@@ -145,8 +145,8 @@ ahex:hover, ahex:focus {
 /* End of container */
 .hexagon-item {
   cursor: pointer;
-  width: 200px;
-  height: 173.2050807569px;
+  width: 150px; /*`200 */
+  height: 130px; /* 173.2050807569px; */
   float: left;
   margin-left: -29px;
   z-index: 0;
