@@ -3753,3 +3753,8 @@ ahex:hover, ahex:focus {
   .hex-content { transform: rotate(-30deg) scale(0.92); }
 }
 
+<style>
+    .italic-text {
+        font-style: italic;
+    }
+</style>
