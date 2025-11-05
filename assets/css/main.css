@@ -3709,7 +3709,7 @@ ahex:hover, ahex:focus {
 .hexagon-menu {
   display: flex;
   align-items: center;
-  justify-content: flex-start;                       /* align with contact box */
+  /* justify-content: flex-start;                       /* align with contact box */
   gap: clamp(1rem, 3vw, 2rem);
   flex-wrap: wrap;                                   /* default: may wrap */
 }
