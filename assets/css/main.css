@@ -192,7 +192,7 @@ ahex:hover, ahex:focus {
   top: 0;
   left: 50px;
   width: 100px;
-  height: 173.2050807569px;
+  height: 130px; */ 173.2050807569px;
 }
 .hex-item:first-child {
   z-index: 0;
@@ -208,7 +208,7 @@ ahex:hover, ahex:focus {
   position: absolute;
   top: 0;
   width: 100px;
-  height: 173.2050807569px;
+  height: 130px; */ 173.2050807569px; */
   transform-origin: center center;
 }
 .hex-item div::before, .hex-item div::after {
@@ -238,12 +238,12 @@ ahex:hover, ahex:focus {
 .hex-content {
   color: #fff;
   display: block;
-  height: 180px;
+  height: 135px; */ 180 px*/
   margin: 0 auto;
   position: relative;
   text-align: center;
   transform: rotate(-30deg);
-  width: 156px;
+  width: 117px; */156px;*/
 }
 .hex-content .hex-content-inner {
   left: 50%;
@@ -3753,8 +3753,6 @@ ahex:hover, ahex:focus {
   .hex-content { transform: rotate(-30deg) scale(0.92); }
 }
 
-<style>
-    .italic-text {
-        font-style: italic;
-    }
-</style>
+.italic-text {
+    font-style: italic;
+}
