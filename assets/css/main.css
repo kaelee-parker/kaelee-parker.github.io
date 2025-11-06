@@ -3803,3 +3803,96 @@ section#one .inner {
 /* Pull quick-links a touch closer to the banner (reduce the blank gap) */
 #banner { padding-bottom: 1.25rem !important; }
 #quick-links { padding-top: 0.5rem; }
+
+/* ====== Page scaffolding ====== */
+.page-hero {
+  text-align: center;
+  margin: 0 auto 1.25rem;
+}
+.page-hero h1 {
+  font-weight: 700;
+  letter-spacing: .02em;
+  margin: 0 0 .25rem;
+}
+.page-hero p {
+  margin: 0;
+  opacity: .9;
+}
+
+/* wider readable width on large screens */
+.content-wrap {
+  max-width: clamp(900px, 88vw, 1200px);
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+  line-height: 1.7;
+}
+
+/* two-column split for "About" */
+.split-2 {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .split-2 { grid-template-columns: 1fr; }
+}
+
+/* portrait image */
+.portrait {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,.18);
+  display: block;
+}
+
+/* soft cards for sections/boxes */
+.card {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+
+/* compact lists */
+ul.clean, ol.clean {
+  margin: .25rem 0 0 1.25rem;
+}
+ul.clean li + li,
+ol.clean li + li { margin-top: .25rem; }
+
+/* publications */
+.pub-list li {
+  margin: .5rem 0;
+}
+.pub-title { font-weight: 600; }
+.pub-badges {
+  display: inline-flex; gap: .5rem; margin-left: .5rem;
+}
+.badge {
+  font-size: .8rem; padding: .15rem .4rem; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(255,255,255,.08);
+}
+
+/* programs grid */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.program { padding: .75rem 1rem; }
+
+/* section headings */
+.section-title {
+  font-weight: 700; margin: 1.25rem 0 .5rem;
+  letter-spacing: .02em;
+}
+
+/* tiny helper for muted text */
+.muted { opacity: .85; }
+
+/* optional: tighten the gap right below the banner on content pages */
+#banner { padding-bottom: 1.25rem !important; }
