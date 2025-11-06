@@ -3629,9 +3629,6 @@ ahex:hover, ahex:focus {
   .hex-content { transform: rotate(-30deg) scale(0.9); }
 }
 
-/* Pull the hex buttons closer to the banner */
-#banner { padding-bottom: 1rem !important; }
-
 #quick-links {
   padding: 2.5rem 0 0;          /* small top padding */
 }
@@ -3801,7 +3798,6 @@ section#one .inner {
    ======================= */
 
 /* Pull quick-links a touch closer to the banner (reduce the blank gap) */
-#banner { padding-bottom: 1.25rem !important; }
 #quick-links { padding-top: 0.5rem; }
 
 /* ====== Page scaffolding ====== */
@@ -3840,7 +3836,7 @@ section#one .inner {
 
 /* portrait image */
 .portrait {
-  width: 100%;
+  width: 90%;
   max-width: 200px;
   border-radius: 8px;
   border: 2px solid;
@@ -3893,7 +3889,7 @@ ol.clean li + li { margin-top: .25rem; }
 }
 
 /* tiny helper for muted text */
-.muted { opacity: .85; }
+.muted { opacity: .75; }
 
 /* optional: tighten the gap right below the banner on content pages */
 #banner { padding-bottom: 1.25rem !important; }
