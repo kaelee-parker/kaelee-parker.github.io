@@ -268,7 +268,7 @@ ahex:hover, ahex:focus {
 .hex-content .title {
   display: block;
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 1px;
   line-height: 24px;
   text-transform: uppercase;
@@ -3616,7 +3616,7 @@ ahex:hover, ahex:focus {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: nowrap;              /* keep rows centered when wrapping */
-  gap: 2px 2px;               /* row gap / column gap (adjust to taste) */
+  gap: 1px 1px;               /* row gap / column gap (adjust to taste) */
   margin: 0 auto 1.25rem;
 }
 
@@ -3715,7 +3715,7 @@ ahex:hover, ahex:focus {
   display: flex;
   align-items: center;
   /* justify-content: flex-start;                       /* align with contact box */
-  gap: clamp(1rem, 3vw, 2rem);
+  gap: 2px 2px;
   flex-wrap: wrap;                                   /* default: may wrap */
 }
 
