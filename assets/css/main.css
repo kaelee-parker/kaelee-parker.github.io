@@ -3810,13 +3810,13 @@ ahex:hover, ahex:focus {
   display: block;
 }
 
-/* Clean, even border for the hex (single border; adjust colors if desired) */
+/* Clean, even border for the hex (single border; adjust colors if desired)
 .hex-content svg path {
   fill: #1e2530;                     /* inner fill */
   stroke: rgba(255,255,255,0.9);     /* border */
   stroke-width: 6px;                 /* thickness of border */
 }
-
+ */
 /* If the theme draws extra “double” borders with .hex-item layers, hide them */
 .hex-item { display: none !important; }
 
