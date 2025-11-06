@@ -3841,9 +3841,10 @@ section#one .inner {
 /* portrait image */
 .portrait {
   width: 100%;
-  max-width: 300px;
+  max-width: 200px;
   border-radius: 8px;
-  border: 2px solid rgba(255,255,255,.18);
+  border: 2px solid;
+  border-color: #000000;
   display: block;
 }
 
