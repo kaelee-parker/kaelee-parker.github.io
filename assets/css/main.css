@@ -143,15 +143,22 @@ ahex:hover, ahex:focus {
 }
 
 /* End of container */
+
+/* Change just this to make all hex buttons smaller/larger */
+:root {
+  --hex-scale: 0.7;      /* 0.82 ≈ smaller than what you have now */
+}
+
+
 .hexagon-item {
   cursor: pointer;
-  width: 150px; /*`200 */
-  height: 130px; /* 173.2050807569px; */
+  width: 200px;
+  height: 173.2050807569px; 
   float: left;
   margin-left: -29px;
   z-index: 0;
   position: relative;
-  transform: rotate(30deg) translate(250%, -250%);
+  transform: rotate(30deg) translate(250%, -250%) scale(var(--hex-scale));
 }
 .hexagon-item:first-child {
   transform: rotate(30deg) translate(250%, -250%);
@@ -192,7 +199,7 @@ ahex:hover, ahex:focus {
   top: 0;
   left: 50px;
   width: 100px;
-  height: 130px; */ 173.2050807569px;
+  height: 173.2050807569px; 
 }
 .hex-item:first-child {
   z-index: 0;
@@ -208,7 +215,7 @@ ahex:hover, ahex:focus {
   position: absolute;
   top: 0;
   width: 100px;
-  height: 130px; */ 173.2050807569px; */
+  height: 173.2050807569px; 
   transform-origin: center center;
 }
 .hex-item div::before, .hex-item div::after {
@@ -238,12 +245,12 @@ ahex:hover, ahex:focus {
 .hex-content {
   color: #fff;
   display: block;
-  height: 135px; */ 180 px*/
+  height: 180px; 
   margin: 0 auto;
   position: relative;
   text-align: center;
   transform: rotate(-30deg);
-  width: 117px; */156px;*/
+  width: 156px;
 }
 .hex-content .hex-content-inner {
   left: 50%;
@@ -3760,65 +3767,6 @@ ahex:hover, ahex:focus {
 /* =======================
    HEXAGON: size + layout
    ======================= */
-
-/* Change just this to make all hex buttons smaller/larger */
-:root {
-  --hex-scale: 0.82;      /* 0.82 ≈ smaller than what you have now */
-}
-
-/* The container that holds the hex buttons */
-.hexagon-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.6rem 2rem;        /* vertical, horizontal spacing */
-  flex-wrap: wrap;         /* wrap on small screens */
-  margin: 0 auto 1.2rem;
-}
-
-/* Neutralize legacy float/translate; keep the 30° rotation */
-.hexagon-item {
-  float: none !important;
-  transform: rotate(30deg) scale(var(--hex-scale)) !important;
-  transform-origin: center center;
-  position: relative;
-}
-
-/* The clickable area (rotated back), center the text perfectly */
-.hex-content {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center;
-  transform: rotate(-30deg);
-  line-height: 1.2;
-  padding: 0;              /* rely on SVG size */
-}
-
-/* Make the title readable at smaller sizes */
-.hex-content .title {
-  display: inline-block;
-  font-weight: 600;
-  font-size: 0.95rem;      /* adjust if needed */
-  letter-spacing: 0.02em;
-}
-
-/* Ensure the SVG defines the hex size; keep it responsive to scale() */
-.hex-content svg {
-  width: 174px;
-  height: 200px;
-  display: block;
-}
-
-/* Clean, even border for the hex (single border; adjust colors if desired)
-.hex-content svg path {
-  fill: #1e2530;                     /* inner fill */
-  stroke: rgba(255,255,255,0.9);     /* border */
-  stroke-width: 6px;                 /* thickness of border */
-}
- */
-/* If the theme draws extra “double” borders with .hex-item layers, hide them */
-.hex-item { display: none !important; }
 
 /* Keep hexes on one line on wide screens (feel free to remove if you want wrap) */
 @media (min-width: 980px) {
