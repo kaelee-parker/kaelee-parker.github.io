@@ -3752,7 +3752,7 @@ ahex:hover, ahex:focus {
   .hexagon-menu {
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem 1.25rem;
+    gap: 0.5rem 0.25rem;
   }
 }
 
