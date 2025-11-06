@@ -268,7 +268,7 @@ ahex:hover, ahex:focus {
 .hex-content .title {
   display: block;
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 1px;
   line-height: 24px;
   text-transform: uppercase;
@@ -3671,12 +3671,13 @@ ahex:hover, ahex:focus {
 }
 
 #about .about-photo img {
-  width: 80%;
+  width: 100%;
   max-width: 200px;
   display: block;
-  border-radius: 3px;
+  border-radius: 2px;
   border: 2px solid;
   border-color: #000000;
+	
 }
 
 /* Nice readable line length for the paragraph */
