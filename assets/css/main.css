@@ -3607,7 +3607,7 @@ ahex:hover, ahex:focus {
   float: none !important;
   margin: 0;                    /* flex gap handles spacing */
   position: relative;
-  transform: rotate(30deg) !important;  /* keep rotation, drop translate */
+  transform: rotate(30deg) scale(var(--hex-scale)) !important;  /* keep rotation, drop translate */
 }
 
 /* Make the menu a centered, wrapping flex container */
