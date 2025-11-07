@@ -3897,3 +3897,78 @@ ol.clean li + li { margin-top: .25rem; }
 
 /* optional: tighten the gap right below the banner on content pages */
 #banner { padding-bottom: 2.5rem !important; }
+
+/* =========================
+   HEXAGON: clean border + size + centering
+   ========================= */
+
+/* Hide the decorative line layers that create the "X" strokes */
+.hex-item { display: none !important; }
+
+/* Size/position each hex; adjust scale to taste (0.78–0.90 works well) */
+.hexagon-item {
+  float: none !important;
+  margin: 0;
+  position: relative;
+  transform: rotate(30deg) scale(0.78) !important;
+  transform-origin: center center;
+}
+
+/* The clickable face of the hex — center the label perfectly */
+.hex-content {
+  width: 174px;
+  height: 200px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center;
+  transform: rotate(-30deg);   /* cancels the parent rotation */
+}
+
+/* Tweak the label size/spacing for the smaller hex */
+.hex-content .title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* Use the SVG path for a single, crisp border */
+.hex-content svg {
+  width: 174px;   /* keep SVG same as face for perfect alignment */
+  height: 200px;
+  position: static;
+  transform: none;
+}
+.hex-content svg path {
+  fill: #1e2530;
+  stroke: rgba(255,255,255,0.9);
+  stroke-width: 6px;
+}
+
+/* Row behavior/spacing for the hex strip */
+.hexagon-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem 1.5rem;       /* vertical, horizontal spacing */
+  flex-wrap: wrap;          /* wrap on smaller screens */
+  margin: 0 auto 1.25rem;
+}
+
+/* =========================
+   BANNER → TITLE SPACING
+   ========================= */
+#banner { padding-bottom: 2.25rem !important; }    /* add room under banner */
+header.special,
+.page-hero { margin-top: 1.25rem !important; }     /* bump the page title down a bit */
+
+/* =========================
+   KEEP TWO LINES IN BANNER ON MOBILE
+   (template hides <br> at small widths — re-enable it)
+   ========================= */
+@media (max-width: 736px) {
+  #banner .inner br { display: inline !important; }
+}
+
