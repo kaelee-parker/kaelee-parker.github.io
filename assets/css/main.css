@@ -241,7 +241,7 @@ ahex:hover, ahex:focus {
   position: relative;
   text-align: center;
   align-items: center;
-  transform: rotate(-30deg) scale(var(--hex-scale));
+  transform: rotate(-30deg);
 }
 .hex-content .hex-content-inner {
   left: 50%;
@@ -265,10 +265,10 @@ ahex:hover, ahex:focus {
   text-transform: uppercase;
 }
 .hex-content svg {
-  left: -7px;
-  position: absolute;
-  top: -13px;
-  transform: scale(0.87);
+  width:174px;
+  height: 200px;
+  position: static;
+  transform: none;
   z-index: -1;
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
 }
@@ -283,11 +283,6 @@ ahex:hover, ahex:focus {
   flex-wrap: nowrap;           /* allows second row */
   gap: 0.75rem 0.5rem;            /* spacing between hexagons (vertical , horizontal) */
   margin: 0 auto 1.25rem;
-}
-
-.hexagon-item {
-  float: none !important;    /* override Phantom bootstrap float */
-  transform: rotate(30deg) scale(var(--hex-scale)) !important;
 }
 
 
