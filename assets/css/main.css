@@ -290,7 +290,7 @@ ahex:hover, ahex:focus {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;           /* allows second row */
-  gap: 2px 2px;            /* spacing between hexagons (vertical , horizontal) */
+  gap: 0.5rem 0.25rem;            /* spacing between hexagons (vertical , horizontal) */
   margin: 0 auto;
 }
 
@@ -3616,7 +3616,7 @@ ahex:hover, ahex:focus {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: nowrap;              /* keep rows centered when wrapping */
-  gap: 1px 1px;               /* row gap / column gap (adjust to taste) */
+  gap: 0.5rem 0.25rem;               /* row gap / column gap (adjust to taste) */
   margin: 0 auto 1.25rem;
 }
 
@@ -3715,7 +3715,7 @@ ahex:hover, ahex:focus {
   display: flex;
   align-items: center;
   /* justify-content: flex-start;                       /* align with contact box */
-  gap: 2px 2px;
+  gap: 0.5rem 0.25rem;
   flex-wrap: wrap;                                   /* default: may wrap */
 }
 
@@ -3827,8 +3827,8 @@ section#one .inner {
 /* two-column split for "About" */
 .split-2 {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 2rem;
+  grid-template-columns: 200px 1fr;
+  gap: 1.5rem;
   align-items: start;
 }
 @media (max-width: 900px) {
@@ -3849,8 +3849,8 @@ section#one .inner {
 .card {
   background: rgba(255,255,255,.06);
   border: 1px solid rgba(255,255,255,.18);
-  border-radius: 10px;
-  padding: 1rem 1.25rem;
+  border-radius: 3px;
+  padding: 0 0;
   margin: 0 0;
   font-size: 0.8rem;
 }
