@@ -3936,7 +3936,9 @@ ol.clean li + li { margin-top: .25rem; }
 
 /* Use the SVG path for a single, crisp border */
 .hex-content svg {
-  position: static;
+  left: -7px;
+  top: -13px;
+  position: absolute;
   transform: scale(0.87);
   z-index: -1;
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
