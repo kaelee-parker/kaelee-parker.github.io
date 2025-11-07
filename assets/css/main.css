@@ -2484,7 +2484,8 @@ ahex:hover, ahex:focus {
 		.wrapper.style4 {
 			background: #fff;
 			color: inherit;
-			padding: 4em;
+			padding: 1rem;
+			
 		}
 
 /* Header */
@@ -3784,7 +3785,7 @@ section#one .inner {
   max-width: 1200px;   /* wider than the theme’s ~900–1000px */
   margin-left: auto;
   margin-right: auto;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 /* If you’re using a two-column photo+text grid, keep it roomy */
@@ -3805,6 +3806,7 @@ section#one .inner {
 .page-hero {
   text-align: center;
   margin: 0 auto 1.25rem;
+  padding-top: 1rem;
 }
 .page-hero h1 {
   font-weight: 700;
