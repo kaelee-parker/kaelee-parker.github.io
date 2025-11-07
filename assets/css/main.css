@@ -3936,15 +3936,10 @@ ol.clean li + li { margin-top: .25rem; }
 
 /* Use the SVG path for a single, crisp border */
 .hex-content svg {
-  width: 174px;   /* keep SVG same as face for perfect alignment */
-  height: 200px;
   position: static;
-  transform: none;
-}
-.hex-content svg path {
-  fill: #1e2530;
-  stroke: rgba(255,255,255,0.9);
-  stroke-width: 6px;
+  transform: scale(0.87);
+  z-index: -1;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
 }
 
 /* Row behavior/spacing for the hex strip */
@@ -3952,7 +3947,7 @@ ol.clean li + li { margin-top: .25rem; }
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.2rem 1.5rem;       /* vertical, horizontal spacing */
+  gap: 1rem 0.5rem;       /* vertical, horizontal spacing */
   flex-wrap: wrap;          /* wrap on smaller screens */
   margin: 0 auto 1.25rem;
 }
