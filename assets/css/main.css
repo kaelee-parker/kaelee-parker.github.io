@@ -3916,8 +3916,8 @@ ol.clean li + li { margin-top: .25rem; }
 
 /* The clickable face of the hex — center the label perfectly */
 .hex-content {
-  width: 174px;
-  height: 200px;
+  width: 156px;
+  height: 180px;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -3936,9 +3936,7 @@ ol.clean li + li { margin-top: .25rem; }
 
 /* Use the SVG path for a single, crisp border */
 .hex-content svg {
-  left: -7px;
-  top: -13px;
-  position: absolute;
+  position: static;
   transform: scale(0.87);
   z-index: -1;
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
