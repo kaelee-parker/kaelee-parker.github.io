@@ -3902,9 +3902,6 @@ ol.clean li + li { margin-top: .25rem; }
    HEXAGON: clean border + size + centering
    ========================= */
 
-/* Hide the decorative line layers that create the "X" strokes */
-.hex-item { display: none !important; }
-
 /* Size/position each hex; adjust scale to taste (0.78–0.90 works well) */
 .hexagon-item {
   float: none !important;
