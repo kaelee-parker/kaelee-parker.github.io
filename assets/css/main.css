@@ -149,28 +149,18 @@ ahex:hover, ahex:focus {
   --hex-scale: 0.7;      /* 0.82 ≈ smaller than what you have now */
 }
 
-
 .hexagon-item {
   cursor: pointer;
   width: 200px;
   height: 173.2050807569px; 
-  float: left;
-  margin-left: -29px;
+  float: none;
+  margin: 0;
   z-index: 0;
   position: relative;
-  transform: rotate(30deg);
+  transform: rotate(30deg) scale(var(--hex-scale));
+  transform-origin: center center;
 }
-.hexagon-item:first-child {
-  transform: rotate(30deg);
-  margin-left: 0;
-}
-/*
-.page-home .hexagon-item:nth-last-child(1),
-.page-home .hexagon-item:nth-last-child(2),
-.page-home .hexagon-item:nth-last-child(3) {
-  transform: rotate(30deg) translate(87px, -80px);
-}
-*/
+
 .hexagon-item:hover {
   z-index: 1;
 }
@@ -244,13 +234,14 @@ ahex:hover, ahex:focus {
 
 .hex-content {
   color: #fff;
-  display: block;
-  height: 180px; 
+  display: flex;
+  width: 200px;
+  height: 173.2050807569px; 
   margin: 0 auto;
   position: relative;
   text-align: center;
-  transform: rotate(-30deg);
-  width: 156px;
+  align-items: center;
+  transform: rotate(-30deg) scale(var(--hex-scale));
 }
 .hex-content .hex-content-inner {
   left: 50%;
@@ -289,14 +280,14 @@ ahex:hover, ahex:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;           /* allows second row */
-  gap: 0.5rem 0.25rem;            /* spacing between hexagons (vertical , horizontal) */
-  margin: 0 auto;
+  flex-wrap: nowrap;           /* allows second row */
+  gap: 0.75rem 0.5rem;            /* spacing between hexagons (vertical , horizontal) */
+  margin: 0 auto 1.25rem;
 }
 
 .hexagon-item {
   float: none !important;    /* override Phantom bootstrap float */
-  transform: rotate(30deg) !important;
+  transform: rotate(30deg) scale(var(--hex-scale)) !important;
 }
 
 
@@ -3601,30 +3592,6 @@ ahex:hover, ahex:focus {
 			}
 
 	}
-/* === Hexagon centering overrides (add at the END of main.css) === */
-
-/* Stop left-floating and remove the layout translate that pushes items off-center */
-.hexagon-item {
-  float: none !important;
-  margin: 0;                    /* flex gap handles spacing */
-  position: relative;
-  transform: rotate(30deg) scale(var(--hex-scale)) !important;  /* keep rotation, drop translate */
-}
-
-/* Make the menu a centered, wrapping flex container */
-.hexagon-menu {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: nowrap;              /* keep rows centered when wrapping */
-  gap: 0.5rem 0.25rem;               /* row gap / column gap (adjust to taste) */
-  margin: 0 auto 1.25rem;
-}
-
-/* Remove the special offset on the first item */
-/*.hexagon-item:first-child { */
-/*  transform: rotate(30deg) !important;*/
-/*}*/
 
 @media (max-width: 480px) {
   .hex-content { transform: rotate(-30deg) scale(0.9); }
@@ -3654,9 +3621,6 @@ ahex:hover, ahex:focus {
   color: #000000;
 }
 
-/* Make sure old float-based styles can't cause overlap */
-.hexagon-item { float: none !important; }
-
 /* --- About: photo + text side-by-side --- */
 #about .about-wrap {
   display: grid;
@@ -3675,7 +3639,6 @@ ahex:hover, ahex:focus {
   border-radius: 2px;
   border: 2px solid;
   border-color: #000000;
-	
 }
 
 /* Nice readable line length for the paragraph */
@@ -3711,24 +3674,9 @@ ahex:hover, ahex:focus {
   transform: translateX(8px);
 }
 
-/* 2) Hex row behavior: keep on one line on wide screens, wrap on small */
-.hexagon-menu {
-  display: flex;
-  align-items: center;
-  /* justify-content: flex-start;                       /* align with contact box */
-  gap: 0.5rem 0.25rem;
-  flex-wrap: wrap;                                   /* default: may wrap */
-}
-
 /* On medium/large screens, keep them on one line */
 @media (min-width: 900px) {
   .hexagon-menu { flex-wrap: nowrap; }
-}
-
-/* 3) Kill legacy float/translate that causes misplacement (safety) */
-.hexagon-item {
-  float: none !important;
-  transform: rotate(30deg) scale(var(--hex-scale)) !important;               /* no translate */
 }
 
 /* 4) Tighten the space below the banner a bit on all screens */
@@ -3762,10 +3710,6 @@ ahex:hover, ahex:focus {
 .italic-text {
     font-style: italic;
 }
-
-/* =======================
-   HEXAGON: size + layout
-   ======================= */
 
 /* Keep hexes on one line on wide screens (feel free to remove if you want wrap) */
 @media (min-width: 980px) {
@@ -3897,49 +3841,6 @@ ol.clean li + li { margin-top: .25rem; }
 
 /* optional: tighten the gap right below the banner on content pages */
 #banner { padding-bottom: 2.5rem !important; }
-
-/* =========================
-   HEXAGON: clean border + size + centering
-   ========================= */
-
-/* Size/position each hex; adjust scale to taste (0.78–0.90 works well) */
-.hexagon-item {
-  float: none !important;
-  margin: 0;
-  position: relative;
-  transform: rotate(30deg) scale(0.78) !important;
-  transform-origin: center center;
-}
-
-/* The clickable face of the hex — center the label perfectly */
-.hex-content {
-  width: 156px;
-  height: 180px;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center;
-  transform: rotate(-30deg);   /* cancels the parent rotation */
-}
-
-/* Tweak the label size/spacing for the smaller hex */
-.hex-content .title {
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
-/* Row behavior/spacing for the hex strip */
-.hexagon-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem 0.5rem;       /* vertical, horizontal spacing */
-  flex-wrap: wrap;          /* wrap on smaller screens */
-  margin: 0 auto 1.25rem;
-}
 
 /* =========================
    BANNER → TITLE SPACING
