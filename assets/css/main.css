@@ -268,7 +268,7 @@ ahex:hover, ahex:focus {
 .hex-content .title {
   display: block;
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 1px;
   line-height: 24px;
   text-transform: uppercase;
@@ -3925,7 +3925,7 @@ ol.clean li + li { margin-top: .25rem; }
 /* Tweak the label size/spacing for the smaller hex */
 .hex-content .title {
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   line-height: 1.2;
   letter-spacing: 0.02em;
   text-transform: uppercase;
