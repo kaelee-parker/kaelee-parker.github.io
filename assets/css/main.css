@@ -173,6 +173,9 @@ ahex:hover, ahex:focus {
 .hex-item {
   position: absolute;
   inset: 0;
+  transform: rotate(-30deg);
+  pointer-events: none;
+  z-index: 2;
 }
 /* 
 left: 50px;
