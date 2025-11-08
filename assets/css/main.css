@@ -205,15 +205,15 @@ ahex:hover, ahex:focus {
   inset: 0;                       /* first outline hugs the edge */
   border: 4px solid;
   border-radius: 1px;               /* ensure sharp corners */
-  border-color: #fa6862;
+  border-color: #000000; /*  fa6862;  */
   /* true hexagon shape */
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
           clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
-
-/* second & third outlines inset slightly for the layered look */
-.hex-item div:nth-child(2){ inset: 6px; opacity: 0.9; }
-.hex-item div:nth-child(3){ inset: 12px; opacity: 0.75; }
+.hexagon-item:hover .hex-item div::before,
+.hexagon-item:hover .hex-item div::after {
+  background-color: #fa6862;
+}
 
 /* hexagon-item 
 .hexagon-item {
@@ -230,10 +230,7 @@ ahex:hover, ahex:focus {
 .hexagon-item:hover .hex-content svg {
   transform: scale(1.1);
 }
-.hexagon-item:hover .hex-item div::before,
-.hexagon-item:hover .hex-item div::after {
-  background-color: #fa6862;
-}
+
 */
 /* hex-item
 .hex-item {
