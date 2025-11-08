@@ -274,7 +274,7 @@ ahex:hover, ahex:focus {
   line-height: 24px;
   text-transform: uppercase;
 }
-.hex-content svg {
+/* .hex-content svg {
   width:174px;
   height: 200px;
   display: block;
@@ -282,10 +282,19 @@ ahex:hover, ahex:focus {
   transform: none;
   z-index: -1;
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-}
+}*/
 .hex-content svg {
-	fill: #1e2530;
-	stroke: none;
+  left: -7px;
+  position: absolute;
+  top: -13px;
+  transform: scale(0.87);
+  z-index: -1;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+  /*fill: #1e2530;*/
+  stroke: none;
+}
+.hex-content:hover {
+  color: #fff;
 }
 
 /* hexagon-menu */
