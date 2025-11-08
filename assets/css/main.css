@@ -148,8 +148,74 @@ ahex:hover, ahex:focus {
 :root {
   --hex-scale: 0.7;      /* 0.82 ≈ smaller than what you have now */
 }
+/* Parent tile (keep simple rotate + scale; no translates) */
+.hexagon-item{
+  position: relative;
+  float: none !important;
+  transform: rotate(30deg) scale(var(--hex-scale)) !important;
+  transform-origin: center center;
+  width: 174px;   /* base size that matches your SVG */
+  height: 200px;
+  margin: 0;
+}
 
-/* hexagon-item */
+/* Clickable face; rotate back so text is upright and perfectly centered */
+.hex-content{
+  position: relative;
+  z-index: 1;                    /* under the border layers */
+  width: 174px;
+  height: 200px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center;
+  transform: rotate(-30deg);     /* cancels parent rotation */
+  line-height: 1.2;
+}
+
+/* Title sizing for the smaller hex */
+.hex-content .title{
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+}
+
+/* Use the SVG just for the fill; stroke comes from the layered borders */
+.hex-content svg{
+  width: 174px;
+  height: 200px;
+  display: block;
+}
+.hex-content svg path{
+  fill: #1e2530;
+  stroke: none;   /* border drawn by .hex-item layers below */
+}
+
+.hex-item{
+  position: absolute;
+  inset: 0;                       /* align exactly over the hex face */
+  transform: rotate(-30deg);      /* same orientation as .hex-content */
+  pointer-events: none;           /* clicks go to the link */
+  z-index: 2;                     /* draw above the fill */
+}
+
+/* Each inner div draws one inset hex outline via clip-path */
+.hex-item div{
+  position: absolute;
+  inset: 0;                       /* first outline hugs the edge */
+  border: 2px solid;
+  border-radius: 0;               /* ensure sharp corners */
+  border-color: #fa6862;
+  /* true hexagon shape */
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+/* second & third outlines inset slightly for the layered look */
+.hex-item div:nth-child(2){ inset: 6px; opacity: 0.9; }
+.hex-item div:nth-child(3){ inset: 12px; opacity: 0.75; }
+
+/* hexagon-item 
 .hexagon-item {
   cursor: pointer;
   width: 200px;
@@ -168,8 +234,8 @@ ahex:hover, ahex:focus {
 .hexagon-item:hover .hex-item div::after {
   background-color: #fa6862;
 }
-
-/* hex-item */
+*/
+/* hex-item
 .hex-item {
   position: absolute;
   inset: 0;
@@ -177,7 +243,7 @@ ahex:hover, ahex:focus {
   pointer-events: none;
   z-index: 2;
 }
-/* 
+
 left: 50px;
   top: 0;
   width: 200px;
@@ -190,7 +256,7 @@ left: 50px;
   transform: rotate(-30deg);
   pointer-events: none;
   z-index: 2;
-}*/
+}
 .hex-item:first-child {
   z-index: 0;
   transform: scale(var(--hex-scale)-0.1);
@@ -232,7 +298,7 @@ left: 50px;
 .hex-item div:nth-child(3) {
   transform: rotate(120deg);
 }
-
+/* 
 /* hex-content */
 .hex-content {
   position: relative;
