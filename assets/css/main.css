@@ -162,7 +162,8 @@ ahex:hover, ahex:focus {
 }
 
 .hexagon-item:hover {
-  z-index: 1;
+  background-color: #fa6862
+  z-index: -1;
 }
 
 .hexagon-item:hover .hex-item div::before,
@@ -170,7 +171,7 @@ ahex:hover, ahex:focus {
   background-color: #fa6862;
 }
 .hexagon-item:hover .hex-content svg {
-  transform: scale(0.97);
+  transform: scale(1.1);
 }
 
 .hex-item {
