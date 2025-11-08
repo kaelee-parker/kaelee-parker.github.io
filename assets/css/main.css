@@ -181,22 +181,6 @@ ahex:hover, ahex:focus {
   z-index: 2;
 }
 
-/* Each inner div draws one inset hex outline via clip-path */
-/* 
-.hex-item div{
-  position: absolute;
-  inset: 0;                       /* first outline hugs the edge */
-  border: 2px solid rgba(255,255,255,0.95);
-  border-radius: 0;      */         /* ensure sharp corners */
-  /* true hexagon shape */
-/*   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-}*/   
-
-/* second & third outlines inset slightly for the layered look */
-/* .hex-item div:nth-child(2){ inset: 6px; opacity: 0.9; }*/   
-/* .hex-item div:nth-child(3){ inset: 12px; opacity: 0.75; }*/   
-
 .hex-content {
   position: relative;
   z-index: 1;
@@ -242,9 +226,6 @@ ahex:hover, ahex:focus {
 .hex-content svg {
 	fill: #1e2530;
 	stroke: none;
-}
-.hex-content:hover {
-  color: #fff;
 }
 
 .hexagon-menu {
