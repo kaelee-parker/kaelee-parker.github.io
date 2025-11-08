@@ -194,7 +194,7 @@ ahex:hover, ahex:focus {
   transform: rotate(-30deg);
   line-height: 1.2;
 }
-.hex-content .hex-content-inner {
+.hex-content {
   left: 50%;
   margin: -3px 0 0 2px;
   position: absolute;
