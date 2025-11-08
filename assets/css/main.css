@@ -156,7 +156,7 @@ ahex:hover, ahex:focus {
   height: 173.2050807569px; 
   float: none;
   margin: 0;
-  z-index: 0;
+  z-index: 1;
   position: relative;
   transform: rotate(30deg) scale(var(--hex-scale));
   transform-origin: center center;
@@ -172,12 +172,15 @@ ahex:hover, ahex:focus {
 /* hex-item */
 .hex-item {
   position: absolute;
+  inset: 0;
+}
+/* 
+left: 50px;
   top: 0;
-  left: 50px;
   width: 200px;
   height: 173.2050807569px;
 }
-/* 
+
 .hex-item {
   position: absolute;
   inset: 0;
