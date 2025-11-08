@@ -172,18 +172,26 @@ ahex:hover, ahex:focus {
 /* hex-item */
 .hex-item {
   position: absolute;
+  top: 0;
+  left: 50px;
+  width: 200px;
+  height: 173.2050807569px;
+}
+/* 
+.hex-item {
+  position: absolute;
   inset: 0;
   transform: rotate(-30deg);
   pointer-events: none;
   z-index: 2;
-}
+}*/
 .hex-item:first-child {
   z-index: 0;
   transform: scale(var(--hex-scale)-0.1);
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .hex-item:last-child {
-  transform: scale(var(--hex-scale)-0.1);
+  transform: scale(var(--hex-scale));
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   z-index: 1;
 }
