@@ -171,8 +171,7 @@ ahex:hover, ahex:focus {
   justify-content: center !important;
   text-align: center;
   transform: rotate(-30deg) scale(var(--hex-scale));     /* cancels parent rotation */
-  line-height: 1.2;
-  color: #fff !important;       /* white text */
+   /* color: #fff !important;      white text */
   border: 0 !important;  
 }
 
@@ -180,6 +179,7 @@ ahex:hover, ahex:focus {
 .hex-content .title{
   font-weight: 600;
   font-size: 0.92rem;
+  font-color: #fff;
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
@@ -189,7 +189,6 @@ ahex:hover, ahex:focus {
   width: 174px;
   height: 200px;
   display: block;
-  transition: transform .18s ease;
 }
 .hex-content svg path{
    /* fill: #1e2530; */
@@ -199,7 +198,7 @@ ahex:hover, ahex:focus {
 .hex-item{
   position: absolute;
   inset: 0;                       /* align exactly over the hex face */
-  transform: rotate(-30deg);      /* same orientation as .hex-content */
+  transform: rotate(-30deg)  scale(var(--hex-scale));      /* same orientation as .hex-content */
   pointer-events: none;           /* clicks go to the link */
   z-index: 2;                     /* draw above the fill */
 }
