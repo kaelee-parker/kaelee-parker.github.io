@@ -145,7 +145,7 @@ ahex:hover, ahex:focus {
 /* Hexagon Buttons */
 
 :root {
-  --hex-scale: 0.7;      /* 0.82 ≈ smaller than what you have now */
+  --hex-scale: 0.8;      /* 0.82 ≈ smaller than what you have now */
 }
 
 /* Parent tile (keep simple rotate + scale; no translates) */
@@ -223,7 +223,6 @@ ahex:hover, ahex:focus {
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
           clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   border: 5px solid transparent;               /* invisible by default */
-  transition: border-color .18s ease, inset .18s ease;
 }
 
 /* HOVER: coral border appears, black hex grows slightly */
@@ -231,7 +230,7 @@ ahex:hover, ahex:focus {
   z-index: 1;
 }
 .hexagon-item:hover .hex-item div{ border-color: #fa8072; }
-.hexagon-item:hover .hex-content svg{ transform: scale(1.07); }
+.hexagon-item:hover .hex-content svg{ transform: scale(1); }
 
 
 /* hexagon-item 
