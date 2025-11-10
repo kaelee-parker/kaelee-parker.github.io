@@ -216,7 +216,7 @@ ahex:hover, ahex:focus {
 }
 
 /* HOVER: coral border appears, black hex grows slightly */
-.hexagon-item:hover .hex-item div{ border-color: ##FA8072; }
+.hexagon-item:hover .hex-item div{ border-color: #fa8072; }
 .hexagon-item:hover .hex-content svg{ transform: scale(1.07); }
 
 
