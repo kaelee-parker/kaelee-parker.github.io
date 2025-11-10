@@ -163,7 +163,7 @@ ahex:hover, ahex:focus {
 /* Clickable face; rotate back so text is upright and perfectly centered */
 .hex-content{
   position: relative;
-  z-index: 3;                   /*  under the border layers */
+  z-index: 0;                   /*  under the border layers */
   width: 174px;
   height: 200px;
   display: flex !important;
@@ -184,12 +184,21 @@ ahex:hover, ahex:focus {
 }
 
 /* Use the SVG just for the fill; stroke comes from the layered borders */
+.hex-content svg {
+  left: -7px;
+  position: absolute;
+  top: -13px;
+  transform: scale(0.87);
+  z-index: -1;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+ /* 
 .hex-content svg{
   width: 174px;
   height: 200px;
   display: block;
 }
- /* .hex-content svg path{
+.hex-content svg path{
   fill: #1e2530;
   stroke: none;  
 }
@@ -209,11 +218,14 @@ ahex:hover, ahex:focus {
   /* true hex clip */
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
           clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  border: 3px solid transparent;               /* invisible by default */
+  border: 5px solid transparent;               /* invisible by default */
   transition: border-color .18s ease, inset .18s ease;
 }
 
 /* HOVER: coral border appears, black hex grows slightly */
+.hexagon-item:hover {
+  z-index: 1;
+}
 .hexagon-item:hover .hex-item div{ border-color: #fa8072; }
 .hexagon-item:hover .hex-content svg{ transform: scale(1.07); }
 
