@@ -163,14 +163,14 @@ ahex:hover, ahex:focus {
 /* Clickable face; rotate back so text is upright and perfectly centered */
 .hex-content{
   position: relative;
-  /* z-index: 1;                    under the border layers */
+  z-index: 3;                   /*  under the border layers */
   width: 174px;
   height: 200px;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   text-align: center;
-  transform: rotate(-30deg);     /* cancels parent rotation */
+  transform: rotate(-30deg) scale(var(--hex-scale));     /* cancels parent rotation */
   line-height: 1.2;
   color: #fff !important;       /* white text */
   border: 0 !important;  
