@@ -216,17 +216,27 @@ ahex:hover, ahex:focus {
 }
 
 /* Each inner div draws one inset hex outline via clip-path */
+.hex-item div {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 173.2050807569px; 
+  transform-origin: center center;
+  border: 5px solid transparent;  
+}
+/* 
 .hex-item div{
   box-sizing: border-box;
   position: absolute;
   inset: 0;
-  /* true hex clip
+  true hex clip
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
           clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-   */
-  border: 5px solid transparent;               /* invisible by default */
+   
+  border: 5px solid transparent;           
 }
-
+*/
 /* HOVER: coral border appears, black hex grows slightly */
 .hexagon-item:hover {
   z-index: 1;
