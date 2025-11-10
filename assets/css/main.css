@@ -145,7 +145,7 @@ ahex:hover, ahex:focus {
 /* Hexagon Buttons */
 
 :root {
-  --hex-scale: 0.8;      /* 0.82 ≈ smaller than what you have now */
+  --hex-scale: 0.9;      /* 0.82 ≈ smaller than what you have now */
 }
 
 /* Parent tile (keep simple rotate + scale; no translates) */
