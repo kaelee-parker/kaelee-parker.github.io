@@ -192,7 +192,7 @@ ahex:hover, ahex:focus {
   transition: transform .18s ease;
 }
 .hex-content svg path{
-  fill: #1e2530;
+   /* fill: #1e2530; */
   stroke: none;   /* border drawn by .hex-item layers below */
 }
 
@@ -216,7 +216,7 @@ ahex:hover, ahex:focus {
 }
 
 /* HOVER: coral border appears, black hex grows slightly */
-.hexagon-item:hover .hex-item div{ border-color: #fa6862; }
+.hexagon-item:hover .hex-item div{ border-color: ##FA8072; }
 .hexagon-item:hover .hex-content svg{ transform: scale(1.07); }
 
 
