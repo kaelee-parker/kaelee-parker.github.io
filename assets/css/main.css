@@ -183,20 +183,24 @@ ahex:hover, ahex:focus {
   text-transform: uppercase;
 }
 
+.hex-content svg{
+  width: 174px;
+  height: 200px;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  transform:  scale(var(--hex-scale));
+}
+
 /* Use the SVG just for the fill; stroke comes from the layered borders */
+
+ /* 
 .hex-content svg {
   left: -7px;
   position: absolute;
   top: -13px;
   transform: scale(0.87);
-  z-index: -1;
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-}
- /* 
-.hex-content svg{
-  width: 174px;
-  height: 200px;
-  display: block;
 }
 .hex-content svg path{
   fill: #1e2530;
@@ -206,7 +210,7 @@ ahex:hover, ahex:focus {
 .hex-item{
   position: absolute;
   inset: 0;                       /* align exactly over the hex face */
-  transform: rotate(-30deg);      /* same orientation as .hex-content */
+  transform: rotate(-30deg) scale(var(--hex-scale));      /* same orientation as .hex-content */
   pointer-events: none;           /* clicks go to the link */
   z-index: 2;                     /* draw above the fill */
 }
