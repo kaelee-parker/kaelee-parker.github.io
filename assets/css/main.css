@@ -142,12 +142,12 @@ ahex:hover, ahex:focus {
   background-color: rgba(255, 255, 255, 0.93);
 }
 
-/* End of container */
-
 /* Hexagon Buttons */
+
 :root {
-  --hex-scale: 0.7;      /* 0.82 ≈ smaller than what you have now */
+  --hex-scale: 0.78;      /* 0.82 ≈ smaller than what you have now */
 }
+
 /* Parent tile (keep simple rotate + scale; no translates) */
 .hexagon-item{
   position: relative;
@@ -157,12 +157,13 @@ ahex:hover, ahex:focus {
   width: 174px;   /* base size that matches your SVG */
   height: 200px;
   margin: 0;
+  cursor: pointer;
 }
 
 /* Clickable face; rotate back so text is upright and perfectly centered */
 .hex-content{
   position: relative;
-  z-index: 1;                    /* under the border layers */
+  /* z-index: 1;                    under the border layers */
   width: 174px;
   height: 200px;
   display: flex !important;
@@ -171,6 +172,8 @@ ahex:hover, ahex:focus {
   text-align: center;
   transform: rotate(-30deg);     /* cancels parent rotation */
   line-height: 1.2;
+  color: #fff !important;       /* white text */
+  border: 0 !important;  
 }
 
 /* Title sizing for the smaller hex */
@@ -178,6 +181,7 @@ ahex:hover, ahex:focus {
   font-weight: 600;
   font-size: 0.92rem;
   letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 /* Use the SVG just for the fill; stroke comes from the layered borders */
@@ -185,6 +189,7 @@ ahex:hover, ahex:focus {
   width: 174px;
   height: 200px;
   display: block;
+  transition: transform .18s ease;
 }
 .hex-content svg path{
   fill: #1e2530;
@@ -202,19 +207,18 @@ ahex:hover, ahex:focus {
 /* Each inner div draws one inset hex outline via clip-path */
 .hex-item div{
   position: absolute;
-  inset: 0;                       /* first outline hugs the edge */
-  border: 4px solid;
-  border-radius: 1px;               /* ensure sharp corners */
-  border-color: #fa6862; 
-  /* true hexagon shape */
+  inset: 0;
+  /* true hex clip */
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
           clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  border: 3px solid transparent;               /* invisible by default */
+  transition: border-color .18s ease, inset .18s ease;
 }
-.hexagon-item:hover .hex-item div::before,
-.hexagon-item:hover .hex-item div::after {
-    border: 10px solid;
-	border-color: #fa6862;
-}
+
+/* HOVER: coral border appears, black hex grows slightly */
+.hexagon-item:hover .hex-item div{ border-color: #fa6862; }
+.hexagon-item:hover .hex-content svg{ transform: scale(1.07); }
+
 
 /* hexagon-item 
 .hexagon-item {
@@ -3929,96 +3933,3 @@ header.special,
 @media (max-width: 736px) {
   #banner .inner br { display: inline !important; }
 }
-
-/* ===== HEX: uniform size, hover-only coral border, centered white text ===== */
-
-/* one knob for size */
-:root { --hex-scale: 0.78; }   /* 0.72–0.86 looks good */
-
-/* the tile */
-.hexagon-item{
-  position: relative;
-  width: 174px;                 /* match the SVG */
-  height: 200px;
-  transform: rotate(30deg) scale(var(--hex-scale)) !important;
-  transform-origin: center center;
-  float: none !important;
-  cursor: pointer;
-}
-
-/* clickable face and label */
-.hex-content{
-  position: relative;
-  width: 174px;
-  height: 200px;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center;
-  transform: rotate(-30deg);    /* un-tilt text */
-  line-height: 1.2;
-  color: #fff !important;       /* white text */
-  border: 0 !important;         /* kill dotted link underline */
-}
-.hex-content .title{
-  color: #fff !important;
-  font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: .02em;
-  text-transform: uppercase;
-}
-
-/* black hex fill uses the SVG */
-.hex-content svg{
-  width: 174px;
-  height: 200px;
-  display: block;
-  transition: transform .18s ease;
-}
-.hex-content svg path{
-  fill: #1e2530;
-  stroke: none;                 /* border handled by layers below */
-}
-
-/* layered border aligned to the face */
-.hex-item{
-  position: absolute;
-  inset: 0;
-  transform: rotate(-30deg);
-  pointer-events: none;
-  z-index: 2;
-}
-.hex-item div{
-  position: absolute;
-  inset: 0;
-  /* true hex clip */
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  border: 3px solid transparent;               /* invisible by default */
-  transition: border-color .18s ease, inset .18s ease;
-}
-/* two extra inset outlines for the layered look */
-.hex-item div:nth-child(2){ inset: 6px; }
-.hex-item div:nth-child(3){ inset: 12px; }
-
-/* kill old pseudo-element bars that were drawing red “brackets” */
-.hex-item div::before,
-.hex-item div::after { content: none !important; }
-
-/* HOVER: coral border appears, black hex grows slightly */
-.hexagon-item:hover .hex-item div{ border-color: #fa6862; }
-.hexagon-item:hover .hex-content svg{ transform: scale(1.07); }
-
-/* layout row */
-.hexagon-menu{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.25rem 1.5rem;         /* vertical, horizontal spacing */
-  flex-wrap: wrap;             /* wrap on smaller screens */
-}
-@media (min-width: 980px){
-  .hexagon-menu{ flex-wrap: nowrap; }
-}
-
-
