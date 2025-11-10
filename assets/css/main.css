@@ -145,7 +145,7 @@ ahex:hover, ahex:focus {
 /* Hexagon Buttons */
 
 :root {
-  --hex-scale: 0.78;      /* 0.82 ≈ smaller than what you have now */
+  --hex-scale: 0.7;      /* 0.82 ≈ smaller than what you have now */
 }
 
 /* Parent tile (keep simple rotate + scale; no translates) */
@@ -318,12 +318,6 @@ left: 50px;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.hex-content .icon {
-  display: block;
-  font-size: 36px;
-  line-height: 30px;
-  margin-bottom: 11px;
-}
 .hex-content .title {
   display: block;
   font-family: "Open Sans", sans-serif;
@@ -332,7 +326,14 @@ left: 50px;
   line-height: 24px;
   text-transform: uppercase;
 }
-/* .hex-content svg {
+/* 
+.hex-content .icon {
+  display: block;
+  font-size: 36px;
+  line-height: 30px;
+  margin-bottom: 11px;
+}
+.hex-content svg {
   width:174px;
   height: 200px;
   display: block;
