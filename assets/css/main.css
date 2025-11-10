@@ -235,9 +235,6 @@ ahex:hover, ahex:focus {
 .hexagon-item:hover .hex-content svg {
   transform: scale(1.1);
 }
-
-*/
-/* hex-item
 .hex-item {
   position: absolute;
   inset: 0;
@@ -300,8 +297,7 @@ left: 50px;
 .hex-item div:nth-child(3) {
   transform: rotate(120deg);
 }
-/* 
-/* hex-content
+
 .hex-content {
   position: relative;
   z-index: 1;
@@ -313,7 +309,8 @@ left: 50px;
   align-items: center;
   transform: rotate(-30deg);
   line-height: 1.2;
-}
+} */
+
 .hex-content .hex-content-inner{
   left: 50%;
   margin: -3px 0 0 2px;
