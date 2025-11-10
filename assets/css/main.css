@@ -219,10 +219,10 @@ ahex:hover, ahex:focus {
 .hex-item div {
   box-sizing: border-box;
   position: absolute;
-  top: 0;
-  width: 200px;
-  height: 173.2050807569px; 
+  inset: 0;
   transform-origin: center center;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   border: 5px solid transparent;  
 }
 /* 
