@@ -3930,3 +3930,95 @@ header.special,
   #banner .inner br { display: inline !important; }
 }
 
+/* ===== HEX: uniform size, hover-only coral border, centered white text ===== */
+
+/* one knob for size */
+:root { --hex-scale: 0.78; }   /* 0.72–0.86 looks good */
+
+/* the tile */
+.hexagon-item{
+  position: relative;
+  width: 174px;                 /* match the SVG */
+  height: 200px;
+  transform: rotate(30deg) scale(var(--hex-scale)) !important;
+  transform-origin: center center;
+  float: none !important;
+  cursor: pointer;
+}
+
+/* clickable face and label */
+.hex-content{
+  position: relative;
+  width: 174px;
+  height: 200px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center;
+  transform: rotate(-30deg);    /* un-tilt text */
+  line-height: 1.2;
+  color: #fff !important;       /* white text */
+  border: 0 !important;         /* kill dotted link underline */
+}
+.hex-content .title{
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
+/* black hex fill uses the SVG */
+.hex-content svg{
+  width: 174px;
+  height: 200px;
+  display: block;
+  transition: transform .18s ease;
+}
+.hex-content svg path{
+  fill: #1e2530;
+  stroke: none;                 /* border handled by layers below */
+}
+
+/* layered border aligned to the face */
+.hex-item{
+  position: absolute;
+  inset: 0;
+  transform: rotate(-30deg);
+  pointer-events: none;
+  z-index: 2;
+}
+.hex-item div{
+  position: absolute;
+  inset: 0;
+  /* true hex clip */
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  border: 3px solid transparent;               /* invisible by default */
+  transition: border-color .18s ease, inset .18s ease;
+}
+/* two extra inset outlines for the layered look */
+.hex-item div:nth-child(2){ inset: 6px; }
+.hex-item div:nth-child(3){ inset: 12px; }
+
+/* kill old pseudo-element bars that were drawing red “brackets” */
+.hex-item div::before,
+.hex-item div::after { content: none !important; }
+
+/* HOVER: coral border appears, black hex grows slightly */
+.hexagon-item:hover .hex-item div{ border-color: #fa6862; }
+.hexagon-item:hover .hex-content svg{ transform: scale(1.07); }
+
+/* layout row */
+.hexagon-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem 1.5rem;         /* vertical, horizontal spacing */
+  flex-wrap: wrap;             /* wrap on smaller screens */
+}
+@media (min-width: 980px){
+  .hexagon-menu{ flex-wrap: nowrap; }
+}
+
+
