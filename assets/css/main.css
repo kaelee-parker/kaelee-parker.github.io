@@ -3872,7 +3872,7 @@ section#one .inner {
   max-width: clamp(900px, 88vw, 1200px);
   margin: 0 auto;
   padding: 0 1rem 2rem;
-  padding-top: 1rem;
+  padding-top: 0rem;
   line-height: 1.7;
 }
 
