@@ -3777,6 +3777,15 @@ section#one .inner {
   align-items: center;
 }
 
+.imagetext {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 0;
+  border: 2px solid transparent;
+  display: block;
+  align-items: center;
+}
+
 /* soft cards for sections/boxes */
 .card {
   background: rgba(255,255,255,.06);
