@@ -191,22 +191,6 @@ ahex:hover, ahex:focus {
   z-index: -1;
   transform:  scale(var(--hex-scale));
 }
-
-/* Use the SVG just for the fill; stroke comes from the layered borders */
-
- /* 
-.hex-content svg {
-  left: -7px;
-  position: absolute;
-  top: -13px;
-  transform: scale(0.87);
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-}
-.hex-content svg path{
-  fill: #1e2530;
-  stroke: none;  
-}
- */
 .hex-item{
   position: absolute;
   inset: 0;                       /* align exactly over the hex face */
@@ -225,116 +209,13 @@ ahex:hover, ahex:focus {
           clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   border: 5px solid transparent;  
 }
-/* 
-.hex-item div{
-  box-sizing: border-box;
-  position: absolute;
-  inset: 0;
-  true hex clip
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-   
-  border: 5px solid transparent;           
-}
-*/
+
 /* HOVER: coral border appears, black hex grows slightly */
 .hexagon-item:hover {
   z-index: 1;
 }
 .hexagon-item:hover .hex-item div{ border-color: #fa8072; }
 .hexagon-item:hover .hex-content svg{ transform: scale(1); }
-
-
-/* hexagon-item 
-.hexagon-item {
-  cursor: pointer;
-  width: 200px;
-  height: 173.2050807569px; 
-  float: none;
-  margin: 0;
-  z-index: 1;
-  position: relative;
-  transform: rotate(30deg) scale(var(--hex-scale));
-  transform-origin: center center;
-}
-.hexagon-item:hover .hex-content svg {
-  transform: scale(1.1);
-}
-.hex-item {
-  position: absolute;
-  inset: 0;
-  transform: rotate(-30deg);
-  pointer-events: none;
-  z-index: 2;
-}
-
-left: 50px;
-  top: 0;
-  width: 200px;
-  height: 173.2050807569px;
-}
-
-.hex-item {
-  position: absolute;
-  inset: 0;
-  transform: rotate(-30deg);
-  pointer-events: none;
-  z-index: 2;
-}
-.hex-item:first-child {
-  z-index: 0;
-  transform: scale(var(--hex-scale)-0.1);
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-.hex-item:last-child {
-  transform: scale(var(--hex-scale));
-  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-  z-index: 1;
-}
-.hex-item div {
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  width: 200px;
-  height: 173.2050807569px; 
-  transform-origin: center center;
-}
-.hex-item div::before, .hex-item div::after {
-  background-color: #1e2530;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-}
-.hex-item div:before {
-  top: 0;
-}
-.hex-item div:after {
-  bottom: 0;
-}
-.hex-item div:nth-child(1) {
-  transform: rotate(0deg);
-}
-.hex-item div:nth-child(2) {
-  transform: rotate(60deg);
-}
-.hex-item div:nth-child(3) {
-  transform: rotate(120deg);
-}
-
-.hex-content {
-  position: relative;
-  z-index: 1;
-  color: #fff;
-  display: flex;
-  width: 200px;
-  height: 173.2050807569px; 
-  text-align: center;
-  align-items: center;
-  transform: rotate(-30deg);
-  line-height: 1.2;
-} */
 
 .hex-content .hex-content-inner{
   left: 50%;
@@ -351,35 +232,7 @@ left: 50px;
   line-height: 24px;
   text-transform: uppercase;
 }
-/* 
-.hex-content .icon {
-  display: block;
-  font-size: 36px;
-  line-height: 30px;
-  margin-bottom: 11px;
-}
-.hex-content svg {
-  width:174px;
-  height: 200px;
-  display: block;
-  position: static;
-  transform: none;
-  z-index: -1;
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-}
-.hex-content svg {
-  left: -7px;
-  position: absolute;
-  top: -13px;
-  transform: scale(0.87);
-  z-index: -1;
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-  stroke: none;
-}
-.hex-content:hover {
-  color: #fff;
-}
-*/
+
 /* hexagon-menu */
 .hexagon-menu {
   display: flex;
@@ -393,7 +246,7 @@ left: 50px;
 /* ===== Rectangle around the row of hexagons ===== */
 .hex-frame {
   display: inline-block;                /* shrink-wrap to the content width */
-  padding: 1.25rem 1.75rem;             /* space inside the box */
+  padding: 0.75rem 0.75rem;             /* space inside the box */
   margin: 1rem auto 1.5rem;             /* space above/below */
   border: 2px solid rgba(255,255,255,0.25); /* light border */
   border-radius: 12px;                  /* rounded corners */
@@ -401,12 +254,11 @@ left: 50px;
   box-shadow: 0 0 10px rgba(0,0,0,0.25);/* subtle depth */
 }
 
-/* Center the box in the page */
-#quick-links {
-  display: flex;
-  justify-content: center;
+.hex-frame:hover {
+  border-color: #fa6862;
+  box-shadow: 0 0 15px rgba(250,104,98,0.4);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-
 
 /* Basic */
 
