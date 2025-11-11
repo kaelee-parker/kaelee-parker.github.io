@@ -3862,10 +3862,9 @@ section#one .inner {
   margin: 0;
   opacity: .9;
 }
-.page-hero pleft{
-	margin: 0;
-	align-items: start;
-    text-align: left;
+.page-hero .left-align {
+  text-align: left !important;
+  margin: 0 auto;        /* keep it centered in layout but text flush left */
 }
 
 /* wider readable width on large screens */
