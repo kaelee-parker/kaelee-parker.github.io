@@ -4042,27 +4042,11 @@ section#one p:first-of-type{
   #about, section#one, .about-wrap{ margin-top: 0.5rem !important; }
 }
 
-.paper-pill {
-  display: inline-block;
-  margin: 0.25rem 0.4rem 0.25rem 0;
-  padding: 0.45rem 0.9rem;
-  border: 1.5px solid #fa6862;
-  border-radius: 999px;
-  color: #fa6862;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-.paper-pill:hover {
-  background: #fa6862;
-  color: #fff;
-}
-
-/* ===== Paper buttons ===== */
+/* ===== PAPER BUTTONS ===== */
 .paper-buttons {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;          /* vertical spacing between buttons */
+  gap: 0.75rem;
   align-items: flex-start;
   margin-top: 1rem;
 }
@@ -4070,20 +4054,25 @@ section#one p:first-of-type{
 .paper-btn {
   display: inline-block;
   padding: 0.6rem 1rem;
-  border: 1.5px solid rgba(255,255,255,0.4);
+  border: 1.5px solid rgba(255,255,255,0.35);
   border-radius: 6px;
   color: #ffffff;
   background: rgba(30,37,48,0.8);
   font-size: 0.9rem;
   text-decoration: none;
   transition: all 0.2s ease;
+  max-width: 800px;                 /* keeps titles from stretching too wide */
 }
 
-/* Hover effect */
+/* Hover effect — coral highlight + slight grow */
 .paper-btn:hover {
   background: #fa6862;
   border-color: #fa6862;
   color: #fff;
   transform: scale(1.03);
 }
+
+/* Optional — italicized paper subtitles look cleaner */
+.paper-btn em { font-style: italic; opacity: 0.95; }
+
 
