@@ -3958,3 +3958,78 @@ header.special,
 @media (max-width: 736px) {
   #banner .inner br { display: inline !important; }
 }
+
+/* =========================
+   1) Reduce space below the hex buttons
+   ========================= */
+
+/* The strip that holds your three hex buttons */
+.hexagon-menu{
+  /* was likely adding extra space; make it small and predictable */
+  margin-bottom: 0.75rem !important;
+  /* if you see an unexpected gap, also zero out padding: */
+  padding-bottom: 0 !important;
+}
+
+/* The container that starts your photo/text “About” block */
+#about,         /* if your about section has this id */
+section#one,    /* or the first content section after the hexes */
+.about-wrap {   /* or the specific wrapper you use */
+  margin-top: 0.75rem !important;   /* tighter than the default 2–3rem */
+  padding-top: 0 !important;
+}
+
+/* Some Phantom builds also add a top margin to the first paragraph */
+#about p:first-of-type,
+section#one p:first-of-type{
+  margin-top: 0.25rem !important;
+}
+
+/* =========================
+   2) Utility classes to color specific words
+   (use them on <span> around the words)
+   ========================= */
+:root{
+  --accent-1: #6ec5ff;   /* soft blue */
+  --accent-2: #fa6862;   /* coral (matches your hover border) */
+  --accent-3: #ffd166;   /* warm yellow */
+}
+
+.accent-blue  { color: var(--accent-1) !important; font-weight: 600; }
+.accent-coral { color: var(--accent-2) !important; font-weight: 600; }
+.accent-gold  { color: var(--accent-3) !important; font-weight: 600; }
+
+/* If a parent forces uppercase/letterspacing, keep it consistent */
+.accent-blue, .accent-coral, .accent-gold{
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+/* Optional: subtle underline for emphasis variants */
+.accent-uline { text-decoration: underline; text-decoration-thickness: 0.08em; }
+
+/* =========================
+   3) Shrink the CTA (call-to-action) section height
+   ========================= */
+
+/* Adjust these selectors to match your CTA element; common ids/classes are shown. */
+#cta, .cta, section.cta, section#cta {
+  padding: 1.25rem 0 !important;   /* was ~4–6rem in the theme */
+  min-height: auto !important;     /* ignore any min-height */
+}
+
+/* If CTA has an .inner wrapper that adds space, tighten it too */
+#cta .inner, .cta .inner { padding: 0 !important; }
+
+/* Reduce extra space on CTA title/subtitle if needed */
+#cta h2, .cta h2 { margin: 0 0 0.35rem !important; }
+#cta p,  .cta p  { margin: 0.25rem 0 0 !important; }
+
+/* =========================
+   4) (Optional) keep things tidy on narrow screens
+   ========================= */
+@media (max-width: 820px){
+  .hexagon-menu{ margin-bottom: 0.5rem !important; }
+  #about, section#one, .about-wrap{ margin-top: 0.5rem !important; }
+}
+
