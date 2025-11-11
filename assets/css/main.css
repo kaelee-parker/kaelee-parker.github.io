@@ -3996,9 +3996,9 @@ section#one p:first-of-type{
   --accent-4: #008080;
 }
 
-.accent-indigo  { color: var(--accent-1) !important; font-weight: 400; }
+.accent-indigo  { color: var(--accent-1) !important; font-weight: 500; }
 .accent-coral { color: var(--accent-2) !important; font-weight: 300; }
-.accent-gold  { color: var(--accent-3) !important; font-weight: 400; }
+.accent-gold  { color: var(--accent-3) !important; font-weight: 500; }
 .accent-teal { color: var(--accent-4) !important; font-weight: 400; }
 
 /* If a parent forces uppercase/letterspacing, keep it consistent */
