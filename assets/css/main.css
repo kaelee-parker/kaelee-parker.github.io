@@ -4075,4 +4075,45 @@ section#one p:first-of-type{
 /* Optional — italicized paper subtitles look cleaner */
 .paper-btn em { font-style: italic; opacity: 0.95; }
 
+/* Non-clickable paper boxes (same look as .paper-btn, no hover color, no pointer) */
+.paper-box {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  border-radius: 6px;
+  color: #ffffff;
+  background: rgba(30,37,48,0.8);
+  font-size: 0.9rem;
+  text-decoration: none;
+  max-width: 800px;
+  cursor: default;                 /* not a link */
+  user-select: text;               /* allow text selection */
+}
+
+/* Optional subtle hover lift without color change (remove if you want none) */
+.paper-box:hover { transform: translateY(-1px); }
+
+/* Shared italic style for subtitles, same as .paper-btn */
+.paper-box em { font-style: italic; opacity: 0.95; }
+
+/* Status pill (Submitted, In review, In prep) */
+.paper-status {
+  display: inline-block;
+  margin-left: .5rem;
+  padding: .15rem .45rem;
+  font-size: .78rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.08);
+  vertical-align: middle;
+}
+
+/* Color variants for status */
+.paper-status.submitted { border-color: #6ec5ff66; background: #6ec5ff22; color: #bfe7ff; }
+.paper-status.review    { border-color: #ffd16666; background: #ffd16622; color: #ffe8a6; }
+.paper-status.prep      { border-color: #fa686266; background: #fa686222; color: #ffc1bd; }
+
+/* Layout helpers – reuse your existing container */
+.paper-list { display: flex; flex-direction: column; gap: .75rem; align-items: flex-start; }
+
 
