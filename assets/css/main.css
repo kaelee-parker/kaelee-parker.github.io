@@ -3899,11 +3899,13 @@ section#one .inner {
 }
 
 .largeimage {
-  width: 100%;
-  max-width: 800px;
+  width: 80%;
+  max-width: 500px;
   border-radius: 2px;
-  border: 2px solid transparent;
+  border: 2px solid;
+  border-color: #000000;
   display: block;
+  align-items: center;
 }
 
 /* soft cards for sections/boxes */
