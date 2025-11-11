@@ -3990,17 +3990,19 @@ section#one p:first-of-type{
    (use them on <span> around the words)
    ========================= */
 :root{
-  --accent-1: #6ec5ff;   /* soft blue */
+  --accent-1: #4b0082;   /* indigo */
   --accent-2: #fa6862;   /* coral (matches your hover border) */
   --accent-3: #ffd166;   /* warm yellow */
+  --accent-4: #008080;
 }
 
-.accent-blue  { color: var(--accent-1) !important; font-weight: inherit; }
-.accent-coral { color: var(--accent-2) !important; font-weight: inherit; }
-.accent-gold  { color: var(--accent-3) !important; font-weight: inherit; }
+.accent-indigo  { color: var(--accent-1) !important; font-weight: 300; }
+.accent-coral { color: var(--accent-2) !important; font-weight: 300; }
+.accent-gold  { color: var(--accent-3) !important; font-weight: 300; }
+.accent-teal { color: var(--accent-4) !important; font-weight: 300; }
 
 /* If a parent forces uppercase/letterspacing, keep it consistent */
-.accent-blue, .accent-coral, .accent-gold{
+.accent-indigo, .accent-coral, .accent-gold .accent-teal{
   letter-spacing: inherit;
   text-transform: inherit;
 }
