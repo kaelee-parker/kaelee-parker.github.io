@@ -3864,7 +3864,8 @@ section#one .inner {
 }
 .page-hero pleft{
 	margin: 0;
-	text-align: start;
+	align-items: start;
+    text-align: left;
 }
 
 /* wider readable width on large screens */
