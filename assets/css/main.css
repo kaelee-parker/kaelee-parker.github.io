@@ -3898,6 +3898,14 @@ section#one .inner {
   display: block;
 }
 
+.largeimage {
+  width: 200%;
+  max-width: 800px;
+  border-radius: 2px;
+  border: 2px solid transparent;
+  display: block;
+}
+
 /* soft cards for sections/boxes */
 .card {
   background: rgba(255,255,255,.06);
