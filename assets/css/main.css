@@ -3899,7 +3899,7 @@ section#one .inner {
 }
 
 .largeimage {
-  width: 200%;
+  width: 100%;
   max-width: 800px;
   border-radius: 2px;
   border: 2px solid transparent;
