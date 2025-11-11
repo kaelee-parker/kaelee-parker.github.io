@@ -3995,9 +3995,9 @@ section#one p:first-of-type{
   --accent-3: #ffd166;   /* warm yellow */
 }
 
-.accent-blue  { color: var(--accent-1) !important; font-weight: 600; }
-.accent-coral { color: var(--accent-2) !important; font-weight: 600; }
-.accent-gold  { color: var(--accent-3) !important; font-weight: 600; }
+.accent-blue  { color: var(--accent-1) !important; font-weight: inherit; }
+.accent-coral { color: var(--accent-2) !important; font-weight: inherit; }
+.accent-gold  { color: var(--accent-3) !important; font-weight: inherit; }
 
 /* If a parent forces uppercase/letterspacing, keep it consistent */
 .accent-blue, .accent-coral, .accent-gold{
