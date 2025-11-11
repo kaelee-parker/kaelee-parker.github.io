@@ -246,8 +246,8 @@ ahex:hover, ahex:focus {
 /* ===== Rectangle around the row of hexagons ===== */
 .hex-frame {
   display: inline-block;                /* shrink-wrap to the content width */
-  padding: 0.75rem 0.75rem;             /* space inside the box */
-  margin: 1rem auto 1.5rem;             /* space above/below */
+  padding: 0.1rem 0.1rem;             /* space inside the box */
+  margin: 0.5rem auto 0.5rem;             /* space above/below */
   border: 2px solid rgba(255,255,255,0.25); /* light border */
   border-radius: 12px;                  /* rounded corners */
   background: rgba(255,255,255,0.03);   /* faint translucent backdrop */
