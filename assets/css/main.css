@@ -4038,3 +4038,19 @@ section#one p:first-of-type{
   #about, section#one, .about-wrap{ margin-top: 0.5rem !important; }
 }
 
+.paper-pill {
+  display: inline-block;
+  margin: 0.25rem 0.4rem 0.25rem 0;
+  padding: 0.45rem 0.9rem;
+  border: 1.5px solid #fa6862;
+  border-radius: 999px;
+  color: #fa6862;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.paper-pill:hover {
+  background: #fa6862;
+  color: #fff;
+}
+
