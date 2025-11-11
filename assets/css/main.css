@@ -3862,6 +3862,10 @@ section#one .inner {
   margin: 0;
   opacity: .9;
 }
+.page-hero p_left{
+	margin: 0;
+	text-align: left;
+}
 
 /* wider readable width on large screens */
 .content-wrap {
