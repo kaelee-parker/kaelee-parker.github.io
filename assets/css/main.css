@@ -3878,6 +3878,7 @@ section#one .inner {
   grid-template-columns: 200px 1fr;
   gap: 1.5rem;
   align-items: start;
+  text-align: left;
 }
 @media (max-width: 900px) {
   .split-2 { grid-template-columns: 1fr; }
