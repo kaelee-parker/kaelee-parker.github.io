@@ -4054,3 +4054,32 @@ section#one p:first-of-type{
   color: #fff;
 }
 
+/* ===== Paper buttons ===== */
+.paper-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;          /* vertical spacing between buttons */
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.paper-btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  border-radius: 6px;
+  color: #ffffff;
+  background: rgba(30,37,48,0.8);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.paper-btn:hover {
+  background: #fa6862;
+  border-color: #fa6862;
+  color: #fff;
+  transform: scale(1.03);
+}
+
