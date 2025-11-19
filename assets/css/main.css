@@ -227,7 +227,7 @@ ahex:hover, ahex:focus {
 .hex-content .title {
   display: block;
   font-family: "Open Sans", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 1px;
   line-height: 24px;
   text-transform: uppercase;
@@ -239,7 +239,7 @@ ahex:hover, ahex:focus {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;           /* allows second row */
-  gap: 0.5rem 0.25rem;            /* spacing between hexagons (vertical , horizontal) */
+  gap: 0.35rem 0.25rem;            /* spacing between hexagons (vertical , horizontal) */
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   padding-top: 0 !important;
@@ -249,7 +249,7 @@ ahex:hover, ahex:focus {
 /* ===== Rectangle around the row of hexagons ===== */
 .hex-frame {
   display: inline-block;                /* shrink-wrap to the content width */
-  padding: 0.1rem 1rem;           /* space inside the box */
+  padding: 0.01rem 1rem;           /* space inside the box */
   margin: 1rem auto 1.5rem;        /* space above/below */
   border: 2px solid rgba(255,255,255,0.25); /* light border */
   border-radius: 12px;                  /* rounded corners */
