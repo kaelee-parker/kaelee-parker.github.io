@@ -249,7 +249,7 @@ ahex:hover, ahex:focus {
 /* ===== Rectangle around the row of hexagons ===== */
 .hex-frame {
   display: inline-block;                /* shrink-wrap to the content width */
-  padding: 0.5rem 1.2rem;           /* space inside the box */
+  padding: 0.1rem 1rem;           /* space inside the box */
   margin: 1rem auto 1.5rem;        /* space above/below */
   border: 2px solid rgba(255,255,255,0.25); /* light border */
   border-radius: 12px;                  /* rounded corners */
@@ -258,8 +258,8 @@ ahex:hover, ahex:focus {
 }
 
 .hex-frame {
-  padding-top: 0.25rem !important;
-  padding-bottom: 0.25rem !important;
+  padding-top: 0.1rem !important;
+  padding-bottom: 0.1rem !important;
 }
 
 .hex-frame:hover {
