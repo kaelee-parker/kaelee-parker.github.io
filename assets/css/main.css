@@ -253,7 +253,7 @@ ahex:hover, ahex:focus {
   margin: 1rem auto 1.5rem;        /* space above/below */
   border: 2px solid rgba(255,255,255,0.25); /* light border */
   border-radius: 12px;                  /* rounded corners */
-  background: rgba(255,255,255,0.03);   /* faint translucent backdrop */
+  background: #ffffff;   /* faint translucent backdrop */
   box-shadow: 0 0 10px rgba(0,0,0,0.25);/* subtle depth */
 }
 
