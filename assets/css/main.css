@@ -145,7 +145,7 @@ ahex:hover, ahex:focus {
 /* Hexagon Buttons */
 
 :root {
-  --hex-scale: 0.75;      /* 0.82 ≈ smaller than what you have now */
+  --hex-scale: 0.8;      /* 0.82 ≈ smaller than what you have now */
 }
 
 /* Parent tile (keep simple rotate + scale; no translates) */
@@ -177,7 +177,7 @@ ahex:hover, ahex:focus {
 
 /* Title sizing for the smaller hex */
 .hex-content .title{
-  font-weight: 400;
+  font-weight: 350;
   font-size: 0.92rem;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -215,7 +215,7 @@ ahex:hover, ahex:focus {
   z-index: 1;
 }
 .hexagon-item:hover .hex-item div{ border-color: #fa8072; }
-.hexagon-item:hover .hex-content svg{ transform: scale(1); }
+.hexagon-item:hover .hex-content svg{ transform: scale(0.95); }
 
 .hex-content .hex-content-inner{
   left: 50%;
@@ -227,7 +227,7 @@ ahex:hover, ahex:focus {
 .hex-content .title {
   display: block;
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 1px;
   line-height: 24px;
   text-transform: uppercase;
@@ -239,7 +239,7 @@ ahex:hover, ahex:focus {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;           /* allows second row */
-  gap: 0.75rem 0.5rem;            /* spacing between hexagons (vertical , horizontal) */
+  gap: 0.5rem 0.25rem;            /* spacing between hexagons (vertical , horizontal) */
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   padding-top: 0 !important;
