@@ -258,8 +258,8 @@ ahex:hover, ahex:focus {
 }
 
 .hex-frame {
-  padding-top: 0.1rem !important;
-  padding-bottom: 0.1rem !important;
+  padding-top: 0.01rem !important;
+  padding-bottom: 0.01rem !important;
 }
 
 .hex-frame:hover {
