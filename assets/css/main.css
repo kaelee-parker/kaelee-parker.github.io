@@ -3849,8 +3849,9 @@ ol.clean li + li { margin-top: .25rem; }
    BANNER → TITLE SPACING
    ========================= */
 #banner { padding-bottom: 2.25rem !important; }    /* add room under banner */
-header.special,
 .page-hero { margin-top: 1.25rem !important; }     /* bump the page title down a bit */
+header.special { margin-top: 0.1rem !important; 
+				 margin-bottom: 0.1rem !important;}
 
 /* =========================
    KEEP TWO LINES IN BANNER ON MOBILE
