@@ -239,7 +239,7 @@ ahex:hover, ahex:focus {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;           /* allows second row */
-  gap: 0.35rem 0.25rem;            /* spacing between hexagons (vertical , horizontal) */
+  gap: 0.35rem 0;            /* spacing between hexagons (vertical , horizontal) */
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   padding-top: 0 !important;
