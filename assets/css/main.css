@@ -3777,12 +3777,12 @@ section#one .inner {
 
 .largeimage {
   width: 100%;
-  max-width: 450px;
-  border-radius: 2px;
-  border: 2px solid;
-  border-color: #000000;
+  max-width: 700px;
+  border-radius: 4px;
+  border: 2px solid #000;
   display: block;
   align-items: center;
+  margin: 0.75rem auto;
 }
 
 .imagetext {
