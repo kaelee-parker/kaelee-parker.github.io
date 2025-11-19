@@ -3777,7 +3777,7 @@ section#one .inner {
 
 .largeimage {
   width: 100%;
-  max-width: 350px;
+  max-width: 450px;
   border-radius: 2px;
   border: 2px solid;
   border-color: #000000;
@@ -3863,14 +3863,6 @@ header.special,
 /* =========================
    1) Reduce space below the hex buttons
    ========================= */
-
-/* The strip that holds your three hex buttons */
-.hexagon-menu{
-  /* was likely adding extra space; make it small and predictable */
-  margin-bottom: 0.75rem !important;
-  /* if you see an unexpected gap, also zero out padding: */
-  padding-bottom: 0 !important;
-}
 
 /* The container that starts your photo/text “About” block */
 #about,         /* if your about section has this id */
