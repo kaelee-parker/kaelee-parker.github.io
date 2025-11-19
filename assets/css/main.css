@@ -240,7 +240,10 @@ ahex:hover, ahex:focus {
   align-items: center;
   flex-wrap: nowrap;           /* allows second row */
   gap: 0.75rem 0.5rem;            /* spacing between hexagons (vertical , horizontal) */
-  margin: 0 auto 1.25rem;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 /* ===== Rectangle around the row of hexagons ===== */
@@ -252,6 +255,11 @@ ahex:hover, ahex:focus {
   border-radius: 12px;                  /* rounded corners */
   background: rgba(255,255,255,0.03);   /* faint translucent backdrop */
   box-shadow: 0 0 10px rgba(0,0,0,0.25);/* subtle depth */
+}
+
+.hex-frame {
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
 }
 
 .hex-frame:hover {
@@ -4004,4 +4012,19 @@ section#one p:first-of-type{
 /* Layout helpers – reuse your existing container */
 .paper-list { display: flex; flex-direction: column; gap: .75rem; align-items: flex-start; }
 
+#quick-links,
+#research-links,
+.section-wrapper-for-hexes {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.hex-frame > *:first-child {
+  margin-top: 0 !important;
+}
+.hex-frame > *:last-child {
+  margin-bottom: 0 !important;
+}
 
