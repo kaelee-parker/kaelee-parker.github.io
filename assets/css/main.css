@@ -3528,7 +3528,7 @@ ahex:hover, ahex:focus {
 			}
 
 			body.contact #main {
-				padding-bottom: 0;
+				padding: 2.5em 0 0 0;
 			}
 
 		/* CTA */
@@ -4019,9 +4019,4 @@ section#one p:first-of-type{
 }
 .hex-frame > *:last-child {
   margin-bottom: 0 !important;
-}
-
-body.contact header.special {
-    padding-top: 1.5rem;   /* decrease top spacing */
-    margin-top: 0rem;      /* prevent extra margin */
 }
