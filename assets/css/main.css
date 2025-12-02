@@ -4021,3 +4021,7 @@ section#one p:first-of-type{
   margin-bottom: 0 !important;
 }
 
+body.contact header.special {
+    padding-top: 1.5rem;   /* decrease top spacing */
+    margin-top: 0rem;      /* prevent extra margin */
+}
